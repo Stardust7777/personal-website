@@ -11,10 +11,12 @@ body{
 
 /* header */
 .navbar-brand{
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-left: 0%;
 }
 .nav-link{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  
 }
 
 /* home */
@@ -27,16 +29,25 @@ body{
   min-height: 100vh;
   position: absolute;
   top: 0; left: 0;
-  background: #527cec;
+  background: #032c61;
 }
 
+
 #name{
-  margin-top: 16rem;
+  margin-top: 28rem;
   font-size: 4rem;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
 }
+#photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 #tagline{
   margin-top: 1rem;
   font-size: 2rem;
