@@ -107,7 +107,8 @@ body{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background: #527cec;
+  background: #032c61;
+  ;
 }
 #portfolio .grid:hover .overlay{
   opacity: 1;
