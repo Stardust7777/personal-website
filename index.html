@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="css/nomalize.css">
+      <link rel="stylesheet" href="css/nomalize.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="library/font-awesome/css/font-awesome.min.css">
@@ -20,10 +20,10 @@
 
     <!-- Navigation -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3" data-bs-theme="dark" style="background-color: #4e16a7;">
         <div class="container">
           <a class="navbar-brand scroll-link" href="#home">
-            <img src="img/me3.JPG" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            <img src="img/me5.jpg" width="50" height="50" class="d-inline-block align-top rounded-circle border" alt="" loading="lazy">
             Manish
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,13 +56,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 justify-content-center">
-            <h1 id="name" class="wow fadeIn">Manish Tajpuriya.</h1>
+            <img id="photo" src="img/me4.jpg" width="200" height="200" class="position-absolute top-50 start-50 translate-middle rounded-circle border " alt="loading">
+            <h1 id="name" class="wow fadeIn ">Manish Tajpuriya.</h1>
             <p id="tagline" class="wow fadeIn">I'm an Aerospace Engineering student. I warmly welcome you to my website.</p>
             <a href="#resume" id="learn-more" class="scroll-link wow fadeIn"><i class="fa fa-angle-down"></i> Learn More</a>
           </div>
         </div>
       </div>
     </section>
+    
+    
 
     <!-- resume -->
     <section id="resume">
@@ -72,7 +75,7 @@
           <p class="about text-center w-75 mx-auto wow fadeIn">I love to invest my time exploring various topics like Rocket Science,Astrophysics, Electronics, Space technologies. Welcome to my world.</p>
         </div>
         <div class="row">
-          <h2 class="title text-center w-100 wow fadeIn">And I love.</h2>
+          <h2 class="title text-center w-100 wow fadeIn">My Topics of Interest</h2>
         </div>
         <div class="row">
           <div class="col-md-4 py-3">
@@ -81,6 +84,7 @@
               <div class="card-body">
                 <h5 class="card-title">Rocketry</h5>
                 <p class="card-text">I love Rocket and I have been involved in several rocketry projets.</p>
+                <a href="https://www.nakka-rocketry.net/" class="btn btn-primary" target="_blank">More Info</a>
               </div>
             </div>
           </div>
@@ -89,7 +93,7 @@
               <img src="img/aircraft.PNG" class="card-img-top" alt="3D Designing">
               <div class="card-body">
                 <h5 class="card-title">3D Designing</h5>
-                <p class="card-text">I love 3D Designing and I have made several designs.</p>
+                <p class="card-text">I love 3D designing and 3D visualization.</p>
               </div>
             </div>
           </div>
@@ -114,18 +118,20 @@
         </div>
         <div class="row">
           <div class="col-md-4 wow fadeIn">
-            <div class="grid">
-              <img src="img/2.png" alt="SRB">
-              <div class="overlay">
-                <div class="text">
-                  SRB
+            <a href="https://www.nakka-rocketry.net/" target="_blank">
+              <div class="grid">
+                <img src="img/rocketry.jpg" alt="SRB">
+                <div class="overlay">
+                  <div class="text">
+                    SRB
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-md-4 wow fadeIn">
             <div class="grid">
-              <img src="img/1.png" alt="Research paper">
+              <img src="img/simulation2.png" alt="Research paper">
               <div class="overlay">
                 <div class="text">
                   Research paper
@@ -145,7 +151,7 @@
           </div>
           <div class="col-md-4 wow fadeIn">
             <div class="grid">
-              <img src="img/Prevent-Identity-Theft.jpg" alt="Prevent Identity Theft">
+              <img src="img/c.png" alt="Thrust Calculator">
               <div class="overlay">
                 <div class="text">
                   Thrust Calculator
@@ -155,7 +161,7 @@
           </div>
           <div class="col-md-4 wow fadeIn">
             <div class="grid">
-              <img src="img/covid19.png" alt="Covid 19">
+              <img src="img/antenna_helix.jpg" alt="Long Range communication">
               <div class="overlay">
                 <div class="text">
                   Long Range Communication
@@ -165,7 +171,7 @@
           </div>
           <div class="col-md-4 wow fadeIn">
             <div class="grid">
-              <img src="img/aircraft.PNG" alt="Aircraft Design and simulation">
+              <img src="img/mq.png" alt="Aircraft Design and simulation">
               <div class="overlay">
                 <div class="text">
                   Aircraft Design and simulation
@@ -235,7 +241,7 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/smooth-scroll.js"></script>
-    <script type="text/javascript" src="js/wow.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>    <!--website lai animate garaune ho-->
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
@@ -253,3 +259,9 @@
 
   </body>
 </html>
+
+<!--change garna lai paila 
+    git add . 
+    git status
+    git commit -m "message here"
+    git push-->
