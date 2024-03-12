@@ -17,14 +17,16 @@
 
   </head>
   <body>
-    <div id="preloader"></div> 
+    <div id="preloader">
+      <img src="img/logo.gif" alt="Loading...">
+    </div> 
 
     <!-- Navigation -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light custom-bg-color fixed-top py-1.5">
         <div class="container">
           <a class="navbar-brand scroll-link" href="#home">
-            <img src="img/me5.jpg" width="50" height="50" class="d-inline-block align-top rounded-circle border" alt="" loading="lazy">
+            <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top " alt="" loading="lazy">
             <span class="navbar-brand-text">Manish</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +69,6 @@
           </div>
         </div>
     </section>
-    
     
 
     <!-- resume -->
@@ -262,10 +263,15 @@
       });
     </script>
     <script>
-      var loader = document.getElementById("preloader");
-      window.addEventListener("load",function(){
-        loader.style.display = "none";
-      })
+      // Wow.js initialization
+      new WOW().init();
+
+      // Remove preloader when content is fully loaded
+      window.addEventListener("load", function() {
+        const preloader = document.getElementById("preloader");
+        preloader.style.display = "none";
+      });
+
     </script>
 
   </body>
