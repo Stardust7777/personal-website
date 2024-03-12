@@ -11,13 +11,27 @@ body{
 
 /* header */
 .navbar-brand{
-  font-size: 2rem;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  height: 100%;
   margin-left: 0%;
+  margin-top: 0%;
 }
 .nav-link{
-  font-size: 1.5rem;
-  
+  font-size: 1.2rem; 
+  color: white !important;
 }
+
+.custom-bg-color {
+  background-color: #1754a3;
+}
+.navbar-brand-text {
+  margin-left: 10px;
+  color: #fff; /* Change to your desired color */
+  line-height: 50px;
+}
+
 
 /* home */
 #home{
@@ -82,6 +96,12 @@ body{
 #resume .card img{
   height: 150px;
 }
+.btn-custom {
+  background-color: #032c61;/* Change to the desired color */
+  color: white; /* Text color */
+  /* Add any additional styling you need */
+}
+
 
 
 /* portfolio */
@@ -193,4 +213,14 @@ footer a:hover{
 }
 footer p{
   text-align: right;
+}
+
+#preloader{
+  background: #032c61 url(img/intro.gif) no-repeat center center;
+  background-size: 50%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
 }
