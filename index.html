@@ -266,11 +266,15 @@
       // Wow.js initialization
       new WOW().init();
 
-      // Remove preloader when content is fully loaded
-      window.addEventListener("load", function() {
+      // Delay time in milliseconds (5 seconds)
+      const delayTime = 5000;
+
+      // Remove preloader after delay time
+      setTimeout(function() {
         const preloader = document.getElementById("preloader");
         preloader.style.display = "none";
-      });
+      }, delayTime);
+
 
     </script>
 
