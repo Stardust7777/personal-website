@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light custom-bg-color fixed-top py-1.5">
-        <div class="container">
+       <!--  <div class="container"> -->
           <a class="navbar-brand scroll-link" href="#home">
             <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top " alt="" loading="lazy">
             <span class="navbar-brand-text">Manish</span>
@@ -49,7 +49,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        <!-- </div> -->
       </nav>
     </header>
     
@@ -58,22 +58,24 @@
     <!-- home -->
     <section id="home">
       <div id="particles-js"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 justify-content-center">
-              <img id="photo" src="img/me4.jpg" width="200" height="200" class="position-absolute top-50 start-50 translate-middle rounded-circle border " alt="loading">
-              <h1 id="name" class="wow fadeIn ">Manish Tajpuriya.</h1>
-              <p id="tagline" class="wow fadeIn">I'm an Aerospace Engineering student. I warmly welcome you to my website.</p>
-              <a href="#introduction" id="learn-more" class="scroll-link wow fadeIn"><i class="fa fa-angle-down"></i> Learn More</a>
-            </div>
+      <div class="home-content">
+        <div class="row">
+          <div class="col-md-12 d-flex flex-column align-items-center justify-content-center">
+            <img id="photo" src="img/me4.jpg" width="200" height="200" class="rounded-circle border" alt="loading">
+            <h1 id="name" class="wow fadeIn">Manish Tajpuriya.</h1>
+            <p id="tagline" class="wow fadeIn">I'm an Aerospace Engineering student. I warmly welcome you to my website.</p>
+            <a href="#introduction" id="learn-more" class="scroll-link wow fadeIn"><i class="fa fa-angle-down"></i> Learn More</a>
           </div>
         </div>
+      </div>
     </section>
+
+
     
 
     <!-- introduction -->
     <section id="introduction">
-      <div class="container pt-5">
+      <!-- <div class="container pt-5"> -->
         <div class="row">
           <h2 class="title text-center w-100 wow fadeIn">My Topics of Interest</h2>
         </div>
@@ -106,7 +108,7 @@
             </div>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
     </section>
     
     <section id="Projects">
@@ -116,61 +118,62 @@
     </section>
 
     <!-- projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row" style="background-color: #032c61;">
-          <h2 class="title text-center w-100 wow slideInUp" style="color: white;" >Rocketry </h2>
-        </div>
-        <div class="row">
-          <div class="col-md-4 py-3">
-            <div class="card" style="width: 18rem;">
-              <img src="img/pcb.jpg" class="card-img-top" alt="...">
-             <div class="card-body">
-              <h5 class="card-title">PCB Design & Fabrication</h5>
-              <p class="card-text">The design and fabrication of PCB for the flight computer of our first model rocketry.</p>
-             </div>
-             <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">Gallery</a>
-              <a href="#" class="btn btn-link btn-light" style="color: black">Design Files</a>
-              <a href="#" class="btn btn-link btn-success" style="color: white;">Fabrication</a>
-             </ul>
-            </div>
-          </div>
-          <div class="col-md-4 py-3">
-            <div class="card" style="width: 18rem;">
-              <img src="img/recovery.jpg" class="card-img-top" alt="...">
+    <section id="projects"> 
+      <div class="row" style="background-color: #032c61;">
+        <h2 class="title text-center w-100 wow slideInUp" style="color: white;" >Rocketry </h2>
+      </div>
+        <!-- <div class="container">  -->
+          <div class="row">
+            <div class="col-md-4 py-3">
+              <div class="card" style="width: 18rem;">
+                <img src="img/pcb.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-              <h5 class="card-title">Recovery system</h5>
-              <p class="card-text">Design, Development and Fabrication of Mechanical(spring-system) ejection system and Pyrotechnique ejection system. </p>
+                <h5 class="card-title">PCB Design & Fabrication</h5>
+                <p class="card-text">The design and fabrication of PCB for the flight computer of our first model rocketry.</p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">Design Files</a>
-              <a href="#" class="btn btn-link btn-light" style="color: black">Fabrication</a>
-              <a href="#" class="btn btn-link btn-success" style="color: white;">Test </a>
-              </ul>            
-            </div>
-          </div>
-          <div class="col-md-4 py-3">
-            <div class="card" style="width: 18rem;">
-              <img src="img/propulsion.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-              <h5 class="card-title">Propulsion </h5>
-              <p class="card-text">Test and comparison of different sugar-based fuel composition, and their properties.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">Compositions</a>
-              <a href="#" class="btn btn-link btn-light" style="color: black">Methodology</a>
-              <a href="#" class="btn btn-link btn-success" style="color: white;">Gallery</a>
+                <a href="#" class="btn btn-primary" style="color: white;">Gallery</a>
+                <a href="#" class="btn   btn-light" style="color: black">Design Files</a>
+                <a href="#" class="btn   btn-success" style="color: white;">Fabrication</a>
               </ul>
+              </div>
+            </div>
+            <div class="col-md-4 py-3">
+              <div class="card" style="width: 18rem;">
+                <img src="img/recovery.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Recovery system</h5>
+                <p class="card-text">Design, Development and Fabrication of Mechanical(spring-system) ejection system and Pyrotechnique ejection system. </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <a href="#" class="btn   btn-primary" style="color: white;">Design Files</a>
+                <a href="#" class="btn   btn-light" style="color: black">Fabrication</a>
+                <a href="#" class="btn   btn-success" style="color: white;">Test </a>
+                </ul>            
+              </div>
+            </div>
+            <div class="col-md-4 py-3">
+              <div class="card" style="width: 18rem;">
+                <img src="img/propulsion.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Propulsion </h5>
+                <p class="card-text">Test and comparison of different sugar-based fuel composition, and their properties.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <a href="#" class="btn   btn-primary" style="color: white;">Compositions</a>
+                <a href="#" class="btn   btn-light" style="color: black">Methodology</a>
+                <a href="#" class="btn   btn-success" style="color: white;">Gallery</a>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
         
         <div class="row" style="background-color: #032c61;">
           <h2 class="title text-center w-100 wow slideInUp" style="color: white;" >Academics </h2>
         </div>
         <div class="row">
-          <div class="col-md-4 py-3">
+          <div class="col-md-4 py-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
              <div class="card-body">
@@ -178,13 +181,13 @@
               <p class="card-text">3D Design and Manufacturing of a model aircraft.</p>
              </div>
              <ul class="list-group list-group-flush">
-              <a href="docs/Aircraft Manufacturing.pdf" class="btn btn-link btn-primary" style="color: white;">Report</a>
-              <a href="docs/Design.stp" class="btn btn-link btn-light" style="color: black">Design files</a>
-              <a href="#" class="btn btn-link btn-success" style="color: white;">DXF Files</a>
+              <a href="docs/Aircraft Manufacturing.pdf" class="btn   btn-primary" style="color: white;">Report</a>
+              <a href="docs/Design.stp" class="btn   btn-light" style="color: black">Design files</a>
+              <a href="#" class="btn   btn-success" style="color: white;">DXF Files</a>
              </ul>
             </div>
           </div>
-          <div class="col-md-4 py-3">
+          <div class="col-md-4 py-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
@@ -192,11 +195,11 @@
               <p class="card-text">A loyal wingman UAV, with all of its preliminary calculations.</p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="docs/Conceptual_Design.pdf" class="btn btn-link btn-primary" style="color: white;">Presentation</a>
-              <a href="img/FD_Design.mp4" class="btn btn-link btn-light" style="color: black">Design</a>
+              <a href="docs/Conceptual_Design.pdf" class="btn   btn-primary" style="color: white;">Presentation</a>
+              <a href="img/FD_Design.mp4" class="btn   btn-light" style="color: black">Design</a>
             </div>
           </div>
-          <div class="col-md-4 py-3">
+          <div class="col-md-4 py-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
@@ -204,8 +207,8 @@
               <p class="card-text">A matlab program to generate and solve the 2-dimensional steady state heat problems. </p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="docs/Group-9_FEM.pdf" class="btn btn-link btn-primary" style="color: white;">Report</a>
-              <a href="#" class="btn btn-link btn-success" style="color: white;">Source Code</a>
+              <a href="docs/Group-9_FEM.pdf" class="btn   btn-primary" style="color: white;">Report</a>
+              <a href="#" class="btn   btn-success" style="color: white;">Source Code</a>
               </ul>
             </div>
           </div>
@@ -217,39 +220,12 @@
           <div class="col-md-4 py-3">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
-             <div class="card-body">
-              <h5 class="card-title">High Altitude Balloon</h5>
-              <p class="card-text">Design, planning and fabrication of a 2 kg probe to be launched into space of altitude 30km.</p>
-             </div>
-             <ul class="list-group list-group-flush">
-              <a href="docs/Project Report_ Aarohan - Nepal's Space Research on High Altitude Balloon.pdf" class="btn btn-link btn-primary" style="color: white;">Report</a>
-             </ul>
-            </div>
-          </div>
-          <div class="col-md-4 py-3">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
-              <h5 class="card-title">Clothe Drying Machine</h5>
-              <p class="card-text">Design and Fabrication of Clothe Drying Machine.</p>
+              <h5 class="card-title">Research Article</h5>
+              <p class="card-text">Flow through Backward Facing Step:Comparison of reattachment length in laminar and turbulent flow </p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="docs/Project_CDM-1.0_2.pdf" class="btn btn-link btn-primary" style="color: white;">Report</a>
-              <a href="#" class="btn btn-link btn-light" style="color: black">Design Files</a>
-              </ul>            
-            </div>
-          </div>
-          <div class="col-md-4 py-3">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-              <h5 class="card-title">Thrust Calculator</h5>
-              <p class="card-text">A C program to calculate the thrust produce by a sugar based rocket motor.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">source code</a>
-              <!-- <a href="#" class="btn btn-link">Card link</a>
-              <a href="#" class="btn btn-link">Card link</a> -->
+              <a href="#" class="btn   btn-primary" style="color: white;">Report</a>
               </ul>
             </div>
           </div>
@@ -261,7 +237,46 @@
               <p class="card-text">Effect of sweep angle on lift characteristic of a canard fins. </p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">Paper</a>
+              <a href="#" class="btn   btn-primary" style="color: white;">Paper</a>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">High Altitude Balloon</h5>
+              <p class="card-text">Design, planning and fabrication of a 2 kg probe to be launched into space of altitude 30km.</p>
+             </div>
+             <ul class="list-group list-group-flush">
+              <a href="docs/Project Report_ Aarohan - Nepal's Space Research on High Altitude Balloon.pdf" class="btn   btn-primary" style="color: white;">Report</a>
+             </ul>
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">Clothe Drying Machine</h5>
+              <p class="card-text">Design and Fabrication of Clothe Drying Machine.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+              <a href="docs/Project_CDM-1.0_2.pdf" class="btn   btn-primary" style="color: white;">Report</a>
+              <a href="#" class="btn   btn-light" style="color: black">Design Files</a>
+              </ul>            
+            </div>
+          </div>
+          <div class="col-md-4 py-4">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">Thrust Calculator</h5>
+              <p class="card-text">A C program to calculate the thrust produce by a sugar based rocket motor.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+              <a href="#" class="btn   btn-primary" style="color: white;">source code</a>
+              <!-- <a href="#" class="btn  ">Card link</a>
+              <a href="#" class="btn  ">Card link</a> -->
               </ul>
             </div>
           </div>
@@ -273,7 +288,7 @@
               <p class="card-text">Development of a powdered solid rocket motor</p>
               </div>
               <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link btn-primary" style="color: white;">Gallery</a>
+              <a href="#" class="btn   btn-primary" style="color: white;">Gallery</a>
               </ul>
             </div>
           </div>
@@ -287,13 +302,13 @@
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
              <div class="card-body">
-              <h5 class="card-title">4th year project</h5>
-              <p class="card-text">Hybrid Rocket motor development . Active guidance rocket control.</p>
+              <h5 class="card-title">Integrated control system for active fin-controlled rocket stabilization and guidance.</h5>
+              <p class="card-text">Final Year Project </p>
              </div>
              <!-- <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link">Card link</a>
-              <a href="#" class="btn btn-link">Card link</a>
-              <a href="#" class="btn btn-link">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
              </ul> -->
             </div>
           </div>
@@ -305,20 +320,20 @@
               <p class="card-text">Effect of vibration on spray cone pattern of a normal and faulty pintle head injector.</p>
               </div>
               <!-- <ul class="list-group list-group-flush">
-              <a href="#" class="btn btn-link">Card link</a>
-              <a href="#" class="btn btn-link">Card link</a>
-              <a href="#" class="btn btn-link">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
+              <a href="#" class="btn  ">Card link</a>
               </ul>             -->
             </div>
           </div>
-        </div>
+        </div>   
     </section>
 
     <!-- contact -->
     <section id="contact">
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="row">
-          <h2 class="title text-center w-100 wow slideInUp">Send me a message. </h2>
+          <h2 class="title text-center w-100 wow slideInUp">Contact me. </h2>
         </div>
         <form action="https://formspree.io/f/xbjnoqrr" method="POST">
           <div class="row py-4">
@@ -333,12 +348,12 @@
             </div>
             <button type="submit" class="btn btn-block submit-message">Submit</button>
         </form>
-      </div>
+      <!-- </div> -->
     </section>
 
     <!-- footer -->
     <footer>
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="row">
           <div class="col-md-5 wow fadeIn">
             <ul>
@@ -366,7 +381,7 @@
             <p>Copyright (c) Manish Tajpuriya.</p>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
     </footer>
 
     <!-- JS Librairies -->
@@ -393,7 +408,7 @@
       new WOW().init();
 
       // Delay time in milliseconds (5 seconds) 3000 haiii
-      const delayTime = 3000;
+      const delayTime = 600;
 
       // Remove preloader after delay time
       setTimeout(function() {
