@@ -557,7 +557,7 @@ footer {
   50% { opacity: 0; }
 }
 
-/* Loading Animation */
+/* Custom Spinner */
 #loading {
   position: fixed;
   top: 0;
@@ -571,12 +571,11 @@ footer {
   z-index: 9999;
 }
 
-.loader {
-  border: 8px solid #0A192F;
-  border-top: 8px solid #00D1FF;
+.custom-loader {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  background: conic-gradient(#00D1FF, transparent);
   animation: spin 1s linear infinite;
 }
 
