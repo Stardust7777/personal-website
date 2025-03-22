@@ -195,11 +195,11 @@
 <section id="contact" class="contact">
     <h2>Get In Touch</h2>
     <p>Have a question or want to collaborate? Feel free to reach out!</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button id="theme-toggle" class="btn">Send</button>
+    <form action="https://formspree.io/f/xbjnoqrr" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
     <div class="social-links">
       <a href="[Your GitHub Link]" target="_blank"><i class="fab fa-github"></i></a>
