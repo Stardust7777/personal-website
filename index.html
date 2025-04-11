@@ -26,10 +26,13 @@
       <li class="dropdown">
         <a href="#projects" class="dropbtn">Projects</a>
         <div class="dropdown-content">
-          <a href="#hypersonics">Hypersonics</a>
-          <a href="#ai">AI</a>
           <a href="#rocketry">Rocketry</a>
-          <a href="#electronics">Electronics</a>
+          <a href="#cfd">CFD</a>
+          <a href="#ai">AI</a>
+          <a href="#hypersonics">Hypersonics</a>
+          <a href="#cad">CAD</a>
+          <a href="#controlsystem">Control system</a>
+          <a href="#electronics">Avionics</a>
           <a href="#propulsion">Propulsion</a>
         </div>
       </li>
@@ -92,7 +95,7 @@
       <!-- Skill 3 -->
       <div class="skill">
         <i class="fas fa-brain"></i>
-        <h3>Artificial Intelligence</h3>
+        <h3>Physics Informed Neural Network(PINN)</h3>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
@@ -101,7 +104,7 @@
       <!-- Skill 4 -->
       <div class="skill">
         <i class="fas fa-code"></i>
-        <h3>Programming (Python, C++)</h3>
+        <h3>Programming (MATLAB,Python, C++)</h3>
         <div class="progress-bar">
           <div class="progress" style="width: 85%;"></div>
         </div>
@@ -118,8 +121,8 @@
   
       <!-- Skill 6 -->
       <div class="skill">
-        <i class="fas fa-chart-line"></i>
-        <h3>Data Analysis</h3>
+        <i class="fas fa-computer"></i>
+        <h3>CFD (OpenFOAM, Ansys)</h3> 
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
@@ -127,38 +130,70 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
 <!-- Projects Section -->
 <section id="projects" class="projects">
   <h2>My Projects</h2>
   <div class="project-grid">
-    <!-- Hypersonics Project -->
-    <div class="project-card" data-category="#hypersonics">
-      <img src="img/1.jpg" alt="Hypersonics Project">
-      <h3>Hypersonic Vehicle Design</h3>
-      <p>Designed and simulated a hypersonic vehicle using CFD tools.</p>
+    <!-- Trishul Project -->
+    <div class="project-card" data-category="#rocketry">
+      <img src="img/Trishul1.png" alt="Rocketry Project">
+      <h3>Project Trishul</h3>
+      <p>High powered rocket, reached an apogee of 8500ft, holding national record for student built rocket for highest apogee.</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
-        <a href="#" class="btn">GitHub</a>
+        <a href="https://youtu.be/Js4Dl5qeV8o?si=ROTylaExx95D6jsa" class="btn">Documentary Video</a>
+        <a href="#" class="btn">Learn More</a>
       </div>
     </div>
 
-    <!-- AI Project -->
-    <div class="project-card" data-category="#ai">
-      <img src="img/2.jpg" alt="AI Project">
-      <h3>AI for Rocket Trajectory Optimization</h3>
-      <p>Developed an AI model to optimize rocket trajectories.</p>
+    <!-- Final year Project -->
+    <div class="project-card" data-category="#rocketry">
+      <img src="img/vajra1.jpg" alt="Rocketry Project">
+      <h3>Project Vajra</h3>
+      <p>Active attitude control(Pitch, yaw and roll) of model rocket using fins.A PID based control system.</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
-        <a href="#" class="btn">GitHub</a>
+        <a href="#" class="btn">Learn more</a>
+        <!-- <a href="#" class="btn">Documentation</a> -->
       </div>
     </div>
 
     <!-- Rocketry Project -->
     <div class="project-card" data-category="#rocketry">
-      <img src="img/3.png" alt="Rocketry Project">
-      <h3>Rocket Propulsion System Analysis</h3>
-      <p>Analyzed and improved the performance of a liquid rocket propulsion system.</p>
+      <img src="img/SRB1.png" alt="Rocketry Project">
+      <h3>Solid Rocket Booster(SRB)</h3>
+      <p>A rocketry group of our college to carry out different research based project in the field of rocketry.</p>
+      <div class="project-links">
+        <a href="#" class="btn">Learn more</a>
+        <!-- <a href="#" class="btn">GitHub</a> -->
+      </div>
+    </div>
+
+    <!-- CFD Project -->
+    <div class="project-card" data-category="#cfd">
+      <img src="img/naturalconvection1.gif" alt="CFD Project">
+      <h3>Natural convection in a closed cavity</h3>
+      <p>An openfoam simulation(transient) of natural convection in a closed cavity.Study the effects of different length of heated wall.</p>
+      <div class="project-links">
+        <a href="#" class="btn">Learn more</a>
+        <a href="#" class="btn">Github</a>
+      </div>
+    </div>
+
+    <!-- CFD Project -->
+    <div class="project-card" data-category="#cfd">
+      <img src="img/backwardfacingstep1.gif" alt="CFD Project">
+      <h3>Flow through Backward Facing Step</h3>
+      <p>An openfoam simulation(transient) of Flow through Backward Facing Step.Comparison of reattachment length in laminar and turbulent flow</p>
+      <div class="project-links">
+        <a href="#" class="btn">Learn more</a>
+        <a href="#" class="btn">Github</a>
+      </div>
+    </div>
+
+    <!-- Hypersonics Project -->
+    <div class="project-card" data-category="#ai">
+      <img src="img/stress PIN.gif" alt="PINN Project">
+      <h3>Thermal Stress and Strain Analysis in a Cooling Glass Slab using PINN</h3>
+      <p>Physics Informed Neural Network(PINN): Simulated development of thermal Stress and strain in a Cooling Glass Slab using PINN</p>
       <div class="project-links">
         <a href="#" class="btn">View Demo</a>
         <a href="#" class="btn">GitHub</a>
@@ -166,10 +201,10 @@
     </div>
 
     <!-- Hypersonics Project -->
-    <div class="project-card" data-category="#electronics">
-      <img src="img/4.jpg" alt="Electronics Project">
-      <h3>Hypersonic Vehicle Design</h3>
-      <p>Designed and simulated a hypersonic vehicle using CFD tools.</p>
+    <div class="project-card" data-category="#ai">
+      <img src="img/Problem_Statement.png" alt="PINN Project">
+      <h3> 2Dcooling on glass slab</h3>
+      <p>Physics Informed Neural Network(PINN): Simulated natural cooling of a 2D glass slab using PINN</p>
       <div class="project-links">
         <a href="#" class="btn">View Demo</a>
         <a href="#" class="btn">GitHub</a>
@@ -177,16 +212,48 @@
     </div>
 
     <!-- Hypersonics Project -->
-    <div class="project-card" data-category="#electronics">
-      <img src="img/5.png" alt="Electronics Project">
-      <h3>Hypersonic Vehicle Design</h3>
-      <p>Designed and simulated a hypersonic vehicle using CFD tools.</p>
+    <div class="project-card" data-category="#ai">
+      <img src="img/cht_com.png" alt="PINN Project">
+      <h3> 3D-Conjugate Heat Transfer Problem using PINN</h3>
+      <p>Physics Informed Neural Network(PINN): Simulated 3D-Conjugate Heat Transfer Problem using PINN in NVIDIA Modulus Framwork</p>
       <div class="project-links">
         <a href="#" class="btn">View Demo</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
+    <!-- Hypersonics Project -->
+    <div class="project-card" data-category="#ai">
+      <img src="img/ad_com.png" alt="PINN Project">
+      <h3>2D Advection-Diffusion problem using PINNs</h3>
+      <p>Physics Informed Neural Network(PINN): Simulated 2D Advection-Diffusion problem using PINNs</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Hypersonics Project -->
+    <div class="project-card" data-category="#ai">
+      <img src="img/ldc.png" alt="PINN Project">
+      <h3>2D-Lid Driven Cavity using PINNs</h3>
+      <p>Physics Informed Neural Network(PINN): Simulated 2D-Lid Driven Cavity using PINNs</p>
+      <div class="project-links">
+        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">GitHub</a>
+      </div>
+    </div>
+
+  <!-- Hypersonics Project -->
+  <div class="project-card" data-category="#ai">
+    <img src="img/pinn.gif" alt="PINN Project">
+    <h3>1D harmonic oscillator Using physics-informed neural network (PINN)</h3>
+    <p>Physics Informed Neural Network(PINN): Simulated 1D harmonic oscillator Using physics-informed neural network (PINN)</p>
+    <div class="project-links">
+      <a href="#" class="btn">View Demo</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
     <!-- Add more projects with appropriate data-category attributes -->
   </div>
 </section>
