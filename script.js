@@ -106,3 +106,32 @@ window.addEventListener('load', () => {
   const loading = document.getElementById('loading');
   loading.style.display = 'none';
 });
+
+
+// Open modal ONLY when "Learn more" is clicked
+document.querySelectorAll('.learn-more').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalId = btn.getAttribute('href');
+    document.querySelector(modalId).style.display = 'flex';
+  });
+});
+
+// Close modal (combined handler for X button AND outside clicks)
+document.querySelectorAll('.close-modal, .modal').forEach(element => {
+  element.addEventListener('click', (e) => {
+    // Close if clicking the X button OR modal overlay (outside content)
+    if (e.target.classList.contains('close-modal') || e.target === element) {
+      e.currentTarget.closest('.modal').style.display = 'none';
+    }
+  });
+});
+
+// Close with ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.style.display = 'none';
+    });
+  }
+});

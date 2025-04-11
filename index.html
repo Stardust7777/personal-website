@@ -145,14 +145,12 @@
       </div>
     </div>
 
-    <!-- Final year Project -->
-    <div class="project-card" data-category="#rocketry">
+    <div class="project-card" data-category="#rocketry" data-id="vajra">
       <img src="img/vajra1.jpg" alt="Rocketry Project">
       <h3>Project Vajra</h3>
-      <p>Active attitude control(Pitch, yaw and roll) of model rocket using fins.A PID based control system.</p>
+      <p>Active attitude control (Pitch, yaw, and roll) of model rocket using fins. A PID-based control system.</p>
       <div class="project-links">
-        <a href="#" class="btn">Learn more</a>
-        <!-- <a href="#" class="btn">Documentation</a> -->
+        <a href="#vajra-modal" class="btn learn-more">Learn more</a> <!-- Link triggers modal -->
       </div>
     </div>
 
@@ -256,24 +254,8 @@
   </div>
     <!-- Add more projects with appropriate data-category attributes -->
   </div>
-</section>
 
-  <!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>Have a question or want to collaborate? Feel free to reach out!</p>
-    <form action="https://formspree.io/f/xbjnoqrr" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <div class="social-links">
-      <a href="https://github.com/Stardust7777" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/manish-tajpuriya/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:tajpuriyamanish77@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
+</section>
 
   <!-- Blog Section -->
 <section id="blog" class="blog">
@@ -299,15 +281,95 @@
   </div>
 </section>
 
+ <!-- Contact Section -->
+ <section id="contact" class="contact">
+  <h2>Get In Touch</h2>
+  <p>Have a question or want to collaborate? Feel free to reach out!</p>
+  <form action="https://formspree.io/f/xbjnoqrr" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  <div class="social-links">
+    <a href="https://github.com/Stardust7777" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/manish-tajpuriya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:tajpuriyamanish77@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2025 Manish Tajpuriya. All rights reserved.</p>
     <div class="social-links">
-      <a href="[Your GitHub Link]" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="[Your LinkedIn Link]" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:[Your Email]" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Stardust7777" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/manish-tajpuriya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:mailto:tajpuriyamanish77@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
   <script src="script.js"></script>
+
+  <div class="modal" id="vajra-modal">
+    <div class="modal-content">
+      <!-- Close Button (Larger + Teal) -->
+      <button class="close-modal" aria-label="Close modal"  style="color: #64ffda; font-size: 28px;">&times;</button>
+  
+      <!-- Image (Fixed Aspect Ratio) -->
+      <div class="modal-image-container">
+        <img src="img/vajra1.jpg" alt="Project Vajra" style="object-fit: contain; max-height: 300px;">
+      </div>
+  
+      <!-- Project Title -->
+      <h2 style="color: #64ffda;">Project Vajra</h2>
+  
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">📌 Description</h3>
+        <p style="color: white;">PID-based control system for active attitude stabilization of model rockets using servo-actuated fins.Active-fin control has become a special part of space launch vehicles and military applica
+          tions. This contributes to improving the accuracy and reliability of modern rockets. The main objective of this project is to develop and demonstrate the active-fins control mechanism that enhances the rocket’s stability
+          and trajectory control. In this project, real-time sensor data such as IMU and GPS has been handled using PID control algorithm to dynamically modify fin positions and guarantee desired flight routes. The project aimed to
+          improve flight stability and trajectory accuracy. The main findings of the project are improved stability and trajectory precision.</p>
+      </div>
+  
+      <!-- Skills (Updated Colors) -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">🛠️ Skills Applied</h3>
+        <div class="skill-tags">
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">PID Control</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Arduino</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">CAD</span>
+        </div>
+      </div>
+
+      <!-- Team Members Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">👥 Team Members</h3>
+        <ul style="color: white; list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> John Doe (Lead Engineer)
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Jane Smith (Aerodynamics)
+          </li>
+          <!-- Add more members as needed -->
+        </ul>
+      </div>
+  
+      <!-- Project Status Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">📌 Project Status</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 12px; height: 12px; background: #64ffda; border-radius: 50%;"></div>
+          <p style="color: white; margin: 0;">Completed - December 2023</p>
+        </div>
+        <!-- Optional: Add links to documentation/demo -->
+        <a href="#" style="display: inline-block; margin-top: 10px; color: #00d1ff; text-decoration: none;">
+          View Final Report →
+        </a>
+      </div>
+
+
+    </div>
+  </div>
 </body>
 </html>
