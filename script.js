@@ -135,3 +135,37 @@ document.addEventListener('keydown', (e) => {
     });
   }
 });
+
+// Initialize Swiper with autoplay for all carousels
+document.addEventListener('DOMContentLoaded', function() {
+  const swipers = document.querySelectorAll('.swiper');
+  
+  swipers.forEach((swiperEl) => {
+    new Swiper(swiperEl, {
+      // Core parameters
+      loop: true,
+      autoplay: {
+        delay: 1000,       // 3 second slide duration
+        pauseOnMouseEnter: true,  // Pauses on hover
+        disableOnInteraction: false // Continues after user interaction
+      },
+      
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+      // Pagination dots
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+      // Optional enhancements
+      speed: 500,          // Transition speed (ms)
+      effect: 'slide',      // 'fade' or 'cube' for different effects
+      grabCursor: true      // Shows hand cursor on hover
+    });
+  });
+});

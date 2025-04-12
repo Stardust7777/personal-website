@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="styles.css?v=1.1"> <!--adding cache buster to css file-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 <!-- Loading Animation -->
@@ -263,17 +265,17 @@
   <div class="blog-posts">
     <!-- Blog Post 1 -->
     <div class="blog-post">
-      <h3>AI in Simulations</h3>
+      <h3>Adding Convective Boundary Conditions for a 2D Heat Diffusion Problem.</h3>
       <p class="blog-date">March 22, 2025</p>
-      <p>Adding Convective Boundary Conditions for a 2D Heat Diffusion Problem.</p>
+      <!-- <p>Adding Convective Boundary Conditions for a 2D Heat Diffusion Problem.</p> -->
       <a href="blog/Blog_Convective_BC_2.html" class="btn">Read More</a>
     </div>
 
     <!-- Blog Post 2 -->
     <div class="blog-post">
-      <h3>AI in Simulations</h3>
+      <h3>Enhancing Simulations with Validation Data in NVIDIA Modulus Sym.</h3>
       <p class="blog-date">March 22, 2025</p>
-      <p>Enhancing Simulations with Validation Data in NVIDIA Modulus Sym.</p>
+      <!-- <p>Enhancing Simulations with Validation Data in NVIDIA Modulus Sym.</p> -->
       <a href="blog/Blog_validator_2.html" class="btn">Read More</a>
     </div>
 
@@ -311,14 +313,29 @@
 
   <div class="modal" id="vajra-modal">
     <div class="modal-content">
-      <!-- Close Button (Larger + Teal) -->
       <button class="close-modal" aria-label="Close modal"  style="color: #64ffda; font-size: 28px;">&times;</button>
-  
-      <!-- Image (Fixed Aspect Ratio) -->
-      <div class="modal-image-container">
-        <img src="img/vajra1.jpg" alt="Project Vajra" style="object-fit: contain; max-height: 300px;">
-      </div>
-  
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="img/vajra1.jpg" alt="Hypersonic CFD Simulation 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/vajra2.png" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/vajra4.jpeg" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/vajra3.png" alt="Hypersonic CFD Simulation 2">
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+        </div>
       <!-- Project Title -->
       <h2 style="color: #64ffda;">Project Vajra</h2>
   
@@ -335,9 +352,10 @@
       <div class="modal-section">
         <h3 style="color: #64ffda;">🛠️ Skills Applied</h3>
         <div class="skill-tags">
-          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">PID Control</span>
-          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Arduino</span>
-          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">CAD</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">PID Control System</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">MAthematical Modelling (MATLAB/Simulink)</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">CAD(Solidworks/CATIA)</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Subsonic Aerodynamics</span>
         </div>
       </div>
 
@@ -346,10 +364,16 @@
         <h3 style="color: #64ffda; margin-top: 20px;">👥 Team Members</h3>
         <ul style="color: white; list-style-type: none; padding-left: 0;">
           <li style="margin-bottom: 8px;">
-            <span style="color: #00d1ff;">•</span> John Doe (Lead Engineer)
+            <span style="color: #00d1ff;">•</span> Manish Tajpuriya
           </li>
           <li style="margin-bottom: 8px;">
-            <span style="color: #00d1ff;">•</span> Jane Smith (Aerodynamics)
+            <span style="color: #00d1ff;">•</span> Sugam Lamsal
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Simran Paudel
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Simonkrith Lamichhane
           </li>
           <!-- Add more members as needed -->
         </ul>
@@ -360,15 +384,13 @@
         <h3 style="color: #64ffda; margin-top: 20px;">📌 Project Status</h3>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 12px; height: 12px; background: #64ffda; border-radius: 50%;"></div>
-          <p style="color: white; margin: 0;">Completed - December 2023</p>
+          <p style="color: white; margin: 0;">Completed - March 2025</p>
         </div>
         <!-- Optional: Add links to documentation/demo -->
-        <a href="#" style="display: inline-block; margin-top: 10px; color: #00d1ff; text-decoration: none;">
-          View Final Report →
+        <a href="#contact" style="display: inline-block; margin-top: 10px; color: #00d1ff; text-decoration: none;">
+          Request Final Report →
         </a>
       </div>
-
-
     </div>
   </div>
 </body>

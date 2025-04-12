@@ -594,7 +594,7 @@ footer {
   width: 100% !important;
   height: 100% !important;
   background: rgba(2, 12, 27, 0.95); /* #020c1b with opacity */
-  z-index: 1000;
+  z-index: 1000 !important;
   align-items: center;
   justify-content: center
 }
@@ -623,13 +623,21 @@ footer {
 
 /* Image Container */
 .modal-image-container {
-  height: 300px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(2, 12, 27, 0.3); /* Dark tint for contrast */
   border-radius: 5px;
   margin-bottom: 15px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 12px;
+  margin-bottom: 5px;
 }
 
 /* Skill Tags (Glow Effect) */
@@ -655,7 +663,7 @@ footer {
   color: #64ffda;
   font-size: 28px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1001;
   padding: 5px 10px;
   transition: all 0.3s;
 }
@@ -678,4 +686,35 @@ footer {
 
 .status-indicator {
   animation: pulse 2s infinite;
+}
+
+/* Swiper Container */
+.swiper {
+  width: 100%;
+  height: 400px; /* Match your project card image height */
+  border-bottom: 2px solid #00D1FF;
+}
+
+/* Images inside Swiper */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation Buttons */
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #00D1FF !important; /* Neon blue to match your theme */
+  padding: 0 10px;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background: #CCD6F6 !important; /* Light gray */
+  opacity: 0.5 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #00D1FF !important; /* Neon blue */
+  opacity: 1 !important;
 }
