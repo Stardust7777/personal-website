@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 </head>
 <body>
 <!-- Loading Animation -->
@@ -36,6 +37,9 @@
           <a href="#controlsystem">Control system</a>
           <a href="#electronics">Avionics</a>
           <a href="#propulsion">Propulsion</a>
+          <a href="#aircraft">Aircraft</a>
+          <a href="#hobby">Hobby Projects</a>
+          
         </div>
       </li>
       <li><a href="#contact">Contact</a></li>
@@ -79,25 +83,18 @@
       <!-- Skill 1 -->
       <div class="skill">
         <i class="fas fa-rocket"></i>
-        <h3>Rocket Propulsion</h3>
+        <h3>Rocketry
+        (Propulsion, Avionics, Composite, Machining, Pcb Designing & Manufacturing)</h3>
         <div class="progress-bar">
           <div class="progress" style="width: 90%;"></div>
         </div>
       </div>
-  
-      <!-- Skill 2 -->
-      <div class="skill">
-        <i class="fas fa-wind"></i>
-        <h3>Hypersonics</h3>
-        <div class="progress-bar">
-          <div class="progress" style="width: 85%;"></div>
-        </div>
-      </div>
-  
+
       <!-- Skill 3 -->
       <div class="skill">
         <i class="fas fa-brain"></i>
-        <h3>Physics Informed Neural Network(PINN)</h3>
+        <h3>AI
+        (Physics Informed Neural Network(PINN))</h3>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
@@ -115,7 +112,7 @@
       <!-- Skill 5 -->
       <div class="skill">
         <i class="fas fa-cogs"></i>
-        <h3>Mechanical Design</h3>
+        <h3>CAD (Solidworks, CATIA)</h3>
         <div class="progress-bar">
           <div class="progress" style="width: 75%;"></div>
         </div>
@@ -123,10 +120,28 @@
   
       <!-- Skill 6 -->
       <div class="skill">
-        <i class="fas fa-computer"></i>
+        <i class="fas fa-layer-water"></i>
         <h3>CFD (OpenFOAM, Ansys)</h3> 
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill">
+        <i class="fas fa-fighter-jet"></i>
+        <h3>Hypersonics</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill">
+        <i class="ti ti-vector-bezier"></i>
+        <h3>Mathematical Modelling (Simulink/MATLAB)</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
         </div>
       </div>
     </div>
@@ -136,7 +151,6 @@
 <section id="projects" class="projects">
   <h2>My Projects</h2>
   <div class="project-grid">
-    <!-- Trishul Project -->
     <div class="project-card" data-category="#rocketry">
       <img src="img/Trishul1.png" alt="Rocketry Project">
       <h3>Project Trishul</h3>
@@ -156,7 +170,6 @@
       </div>
     </div>
 
-    <!-- Rocketry Project -->
     <div class="project-card" data-category="#rocketry">
       <img src="img/SRB1.png" alt="Rocketry Project">
       <h3>Solid Rocket Booster(SRB)</h3>
@@ -167,7 +180,6 @@
       </div>
     </div>
 
-    <!-- CFD Project -->
     <div class="project-card" data-category="#cfd">
       <img src="img/naturalconvection1.gif" alt="CFD Project">
       <h3>Natural convection in a closed cavity</h3>
@@ -178,7 +190,6 @@
       </div>
     </div>
 
-    <!-- CFD Project -->
     <div class="project-card" data-category="#cfd">
       <img src="img/backwardfacingstep1.gif" alt="CFD Project">
       <h3>Flow through Backward Facing Step</h3>
@@ -189,74 +200,158 @@
       </div>
     </div>
 
-    <!-- Hypersonics Project -->
     <div class="project-card" data-category="#ai">
       <img src="img/stress PIN.gif" alt="PINN Project">
       <h3>Thermal Stress and Strain Analysis in a Cooling Glass Slab using PINN</h3>
       <p>Physics Informed Neural Network(PINN): Simulated development of thermal Stress and strain in a Cooling Glass Slab using PINN</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">Learn More</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
-    <!-- Hypersonics Project -->
     <div class="project-card" data-category="#ai">
       <img src="img/Problem_Statement.png" alt="PINN Project">
-      <h3> 2Dcooling on glass slab</h3>
+      <h3> 2Dcooling on glass slab using PINN</h3>
       <p>Physics Informed Neural Network(PINN): Simulated natural cooling of a 2D glass slab using PINN</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">Learn More</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
-    <!-- Hypersonics Project -->
     <div class="project-card" data-category="#ai">
       <img src="img/cht_com.png" alt="PINN Project">
       <h3> 3D-Conjugate Heat Transfer Problem using PINN</h3>
       <p>Physics Informed Neural Network(PINN): Simulated 3D-Conjugate Heat Transfer Problem using PINN in NVIDIA Modulus Framwork</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">Learn More</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
-    <!-- Hypersonics Project -->
     <div class="project-card" data-category="#ai">
       <img src="img/ad_com.png" alt="PINN Project">
       <h3>2D Advection-Diffusion problem using PINNs</h3>
       <p>Physics Informed Neural Network(PINN): Simulated 2D Advection-Diffusion problem using PINNs</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">Learn More</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
-    <!-- Hypersonics Project -->
     <div class="project-card" data-category="#ai">
       <img src="img/ldc.png" alt="PINN Project">
       <h3>2D-Lid Driven Cavity using PINNs</h3>
       <p>Physics Informed Neural Network(PINN): Simulated 2D-Lid Driven Cavity using PINNs</p>
       <div class="project-links">
-        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">Learn More</a>
         <a href="#" class="btn">GitHub</a>
       </div>
     </div>
 
-  <!-- Hypersonics Project -->
   <div class="project-card" data-category="#ai">
     <img src="img/pinn.gif" alt="PINN Project">
     <h3>1D harmonic oscillator Using physics-informed neural network (PINN)</h3>
     <p>Physics Informed Neural Network(PINN): Simulated 1D harmonic oscillator Using physics-informed neural network (PINN)</p>
     <div class="project-links">
-      <a href="#" class="btn">View Demo</a>
+      <a href="#" class="btn">Learn More</a>
       <a href="#" class="btn">GitHub</a>
     </div>
   </div>
-    <!-- Add more projects with appropriate data-category attributes -->
+
+  <div class="project-card" data-category="#cfd">
+    <img src="img/canard1.png" alt="CFD Project">
+    <h3>Effect of sweep angle on lift characteristic of a canard fins</h3>
+    <p>Case Study:Effect of sweep angle on lift characteristic of a canard fins was studied using simulations done on Ansys Fluent.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
   </div>
 
+  <div class="project-card" data-aircraftcategory="#aircraft">
+    <img src="img/apd5.png" alt=" Project">
+    <h3>Flying Fox- The Loyal Wingman</h3>
+    <p>Preliminary Design of a combat aircraft.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#aircraft">
+    <img src="img/am1.PNG" alt="Aircraft Project">
+    <h3>Aircraft Design & Manufacturing</h3>
+    <p>3D Design and Manufacturing of a model aircraft.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#cad">
+    <img src="img/cdm1.png" alt="CAD Project">
+    <h3>Clothe Drying Machine</h3>
+    <p>Design and Fabrication of Cloth Drying Machine Model.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#cfd">
+    <img src="img/fem1.png" alt="CFD Project">
+    <h3>Matlab Code for mesh generation</h3>
+    <p>A matlab program to generate and solve the 2-dimensional steady state heat problems.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#hobby">
+    <img src="img/telescopeme.jpg" alt="Hobby Project">
+    <h3>Homemade Telescope</h3>
+    <p>Manufactured a home made telescope with 20x Magnification with locally available material as part of Astronomy Olympiad.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#hobby">
+    <img src="img/quantaqube.jpg" alt="Hobby Project">
+    <h3>Quantacube</h3>
+    <p>Assembled an 1U cubesat with Long Range communication, Power Management Module, and On-Board Computer as part of Satellite Training.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#hobby">
+    <img src="img/hobbymotor4.jpg" alt="Hobby Project">
+    <h3>Hobby Rocket Motor</h3>
+    <p>Development of sugar based A class motor with locally available material.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="#hobby">
+    <img src="img/hab4.png" alt="Hobby Project">
+    <h3>Project Aarohan: High Altitude Balloon</h3>
+    <p>Design, planning and fabrication of a 2 kg probe to be launched into space of altitude 30km.</p>
+    <div class="project-links">
+      <a href="#" class="btn">Learn More</a>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+  </div>
+
+    <!-- Add more projects with appropriate data-category attributes -->
+</div>
 </section>
 
   <!-- Blog Section -->
