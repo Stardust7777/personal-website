@@ -60,16 +60,38 @@ function highlightProjects(categoryId) {
   });
 }
 
-// Add event listeners to dropdown categories
+// // Add event listeners to dropdown categories
+// projectCategories.forEach(category => {
+//   category.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent default anchor behavior
+//     const categoryId = this.getAttribute('href'); // Get the category ID (e.g., #hypersonics)
+//     const targetSection = document.querySelector('#projects'); // Get the projects section
+//     if (targetSection) {
+//       targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the projects section
+//     }
+//     highlightProjects(categoryId); // Highlight projects for the selected category
+//   });
+// });
+
 projectCategories.forEach(category => {
-  category.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
-    const categoryId = this.getAttribute('href'); // Get the category ID (e.g., #hypersonics)
-    const targetSection = document.querySelector('#projects'); // Get the projects section
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the projects section
+  category.addEventListener('click', function(e) {
+    e.preventDefault();
+    const categoryId = this.getAttribute('href'); // e.g., "#rocketry"
+
+    // Find the FIRST project card in this category
+    const firstCardInCategory = document.querySelector(
+      `.project-card[data-category="${categoryId}"]`
+    );
+
+    if (firstCardInCategory) {
+      firstCardInCategory.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start', // Aligns to the top of the viewport
+      });
+
+      // Optional: Highlight all cards in this category
+      highlightProjects(categoryId);
     }
-    highlightProjects(categoryId); // Highlight projects for the selected category
   });
 });
 
@@ -108,7 +130,7 @@ window.addEventListener('load', () => {
 });
 
 
-// Open modal ONLY when "Learn more" is clicked
+// Open modal
 document.querySelectorAll('.learn-more').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -117,17 +139,21 @@ document.querySelectorAll('.learn-more').forEach(btn => {
   });
 });
 
-// Close modal (combined handler for X button AND outside clicks)
-document.querySelectorAll('.close-modal, .modal').forEach(element => {
-  element.addEventListener('click', (e) => {
-    // Close if clicking the X button OR modal overlay (outside content)
-    if (e.target.classList.contains('close-modal') || e.target === element) {
-      e.currentTarget.closest('.modal').style.display = 'none';
-    }
-  });
+// Close modal - 100% reliable version
+document.addEventListener('click', function(e) {
+  // Close button click
+  if (e.target.closest('.close-modal')) {
+    e.preventDefault();
+    const modal = e.target.closest('.modal');
+    if (modal) modal.style.display = 'none';
+  }
+  // Click on modal overlay (outside content)
+  else if (e.target.classList.contains('modal')) {
+    e.target.style.display = 'none';
+  }
 });
 
-// Close with ESC key
+// ESC key close (keep existing)
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     document.querySelectorAll('.modal').forEach(modal => {

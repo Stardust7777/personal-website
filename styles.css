@@ -597,6 +597,7 @@ footer {
   z-index: 1000 !important;
   align-items: center;
   justify-content: center
+  /* pointer-events: auto; */
 }
 
 /* Modal Content */
@@ -610,6 +611,7 @@ footer {
   padding: 20px;
   border-radius: 8px;
   position: relative !important;
+  pointer-events: auto;
 }
 
 /* Optional: Style scrollbar (modern browsers) */
