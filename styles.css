@@ -33,6 +33,20 @@ body {
     color: #00D1FF;
     text-decoration: none;
   }
+
+  .nav-logo {
+    height: 30px; /* Adjust size */
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle; /* Aligns with text */
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-logo {
+      height: 24px;
+    }
+  }
   
   .nav-links {
     list-style: none;
