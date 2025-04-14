@@ -2,4 +2,4 @@
 THis is where I have stored the basic structured files for Personal Websites.
 ALL web development frameworks in ONE place.
 
-Note: Anyone can download the contents of this repositary for their Websites.
+Note: Please don't forget to give me credit while copying my website. Thank You. 
