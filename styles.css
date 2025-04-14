@@ -734,3 +734,19 @@ footer {
   background: #00D1FF !important; /* Neon blue */
   opacity: 1 !important;
 }
+
+.report-request-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  color: #00d1ff !important;
+  text-decoration: none !important;
+  border: 1px solid #00d1ff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.report-request-btn:hover {
+  background: rgba(0, 209, 255, 0.1);
+  transform: translateY(-2px);
+}

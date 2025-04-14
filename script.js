@@ -130,37 +130,92 @@ window.addEventListener('load', () => {
 });
 
 
-// Open modal
-document.querySelectorAll('.learn-more').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const modalId = btn.getAttribute('href');
-    document.querySelector(modalId).style.display = 'flex';
-  });
-});
+// // Open modal
+// document.querySelectorAll('.learn-more').forEach(btn => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const modalId = btn.getAttribute('href');
+//     document.querySelector(modalId).style.display = 'flex';
+//   });
+// });
 
-// Close modal - 100% reliable version
-document.addEventListener('click', function(e) {
-  // Close button click
-  if (e.target.closest('.close-modal')) {
-    e.preventDefault();
-    const modal = e.target.closest('.modal');
-    if (modal) modal.style.display = 'none';
-  }
-  // Click on modal overlay (outside content)
-  else if (e.target.classList.contains('modal')) {
-    e.target.style.display = 'none';
-  }
-});
+// // Close modal - 100% reliable version
+// document.addEventListener('click', function(e) {
+//   // Close button click
+//   if (e.target.closest('.close-modal')) {
+//     e.preventDefault();
+//     const modal = e.target.closest('.modal');
+//     if (modal) modal.style.display = 'none';
+//   }
+//   // Click on modal overlay (outside content)
+//   else if (e.target.classList.contains('modal')) {
+//     e.target.style.display = 'none';
+//   }
+// });
 
-// ESC key close (keep existing)
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.style.display = 'none';
+// // ESC key close (keep existing)
+// document.addEventListener('keydown', (e) => {
+//   if (e.key === 'Escape') {
+//     document.querySelectorAll('.modal').forEach(modal => {
+//       modal.style.display = 'none';
+//     });
+//   }
+// });
+
+// Combined modal handling in one clean function
+function handleModalActions() {
+  // 1. Open modal handler
+  document.querySelectorAll('.learn-more').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = btn.getAttribute('href');
+      document.querySelector(modalId).style.display = 'flex';
     });
-  }
-});
+  });
+
+  // 2. Universal close handler (all methods)
+  document.addEventListener('click', function(e) {
+    // Case 1: Close button clicked
+    if (e.target.closest('.close-modal')) {
+      e.preventDefault();
+      e.stopPropagation(); // Prevent other handlers
+      closeAllModals();
+    }
+    // Case 2: Modal overlay clicked
+    else if (e.target.classList.contains('modal')) {
+      closeAllModals();
+    }
+    // Case 3: Contact link clicked inside modal
+    else if (e.target.closest('a[href="#contact"]')) {
+      e.preventDefault();
+      closeAllModals();
+      scrollToContact();
+    }
+  });
+
+  // 3. ESC key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllModals();
+  });
+}
+
+// Helper function to close all modals
+function closeAllModals() {
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.style.display = 'none';
+  });
+}
+
+// Helper function to scroll to contact
+function scrollToContact() {
+  setTimeout(() => {
+    const contact = document.getElementById('contact');
+    if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+  }, 10);
+}
+
+// Initialize all modal functionality
+handleModalActions();
 
 // Initialize Swiper with autoplay for all carousels
 document.addEventListener('DOMContentLoaded', function() {
@@ -195,3 +250,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+

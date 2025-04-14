@@ -45,6 +45,7 @@
           <a href="#hobby">Hobby Projects</a>          
         </div>
       </li>
+      <!-- <li><a href="#hobby">Hobbies</a></li> -->
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -54,7 +55,7 @@
   <section id="hero" class="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
-      <p>Aerospace Engineer | Hypersonics Enthusiast | AI & Rocketry Passionate</p>
+      <p>Aerospace Engineer | Rocketry Enthusiast | AI & Hypersonics</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
   </section>
@@ -151,7 +152,7 @@
   </section>
 
 <!-- Projects Section -->
-<section id="projects" class="projects">
+<section id="projects" class="projects" data-id="trishul">
   <h2>My Projects</h2>
   <div class="project-grid">
     <div class="project-card" data-category="#rocketry">
@@ -160,7 +161,7 @@
       <p>High powered rocket, reached an apogee of 8500ft, holding national record for student built rocket for highest apogee.</p>
       <div class="project-links">
         <a href="https://youtu.be/Js4Dl5qeV8o?si=ROTylaExx95D6jsa" class="btn">Documentary Video</a>
-        <a href="#" class="btn">Learn More</a>
+        <a href="#trishul-modal" class="btn learn-more">Learn More</a>
       </div>
     </div>
 
@@ -173,13 +174,12 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#rocketry">
+    <div class="project-card" data-category="#rocketry" data-id="srb">
       <img src="img/SRB1.png" alt="Rocketry Project">
       <h3>Solid Rocket Booster(SRB)</h3>
       <p>A rocketry group of our college to carry out different research based project in the field of rocketry.</p>
       <div class="project-links">
-        <a href="#" class="btn">Learn more</a>
-        <!-- <a href="#" class="btn">GitHub</a> -->
+        <a href="#srb-modal" class="btn learn-more">Learn more</a>
       </div>
     </div>
 
@@ -409,6 +409,120 @@
   </footer>
   <script src="script.js"></script>
 
+  <div class="modal" id="trishul-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal"  style="color: #64ffda; font-size: 28px;">&times;</button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="img/Trishul6.jpg" alt="Hypersonic CFD Simulation 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Trishul5.png" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Trishulme.jpg" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Trishul2.jpg" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Trishul4.jpg" alt="Hypersonic CFD Simulation 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Trishul3.jpg" alt="Hypersonic CFD Simulation 2">
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      <!-- Project Title -->
+      <h2 style="color: #64ffda;">Project Trishul</h2>
+  
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">📌 Description</h3>
+        <p style="color: white;">Project Trishul is the national record holder(highest apogee of 2682m) rocket built by any student based group in Nepal.This project presents the design, development, and testing of a solid-fuel rocket by Team SRB. The project aimed to achieve an apogee of 3000 meters, incorporating advanced aerodynamic, structural, and avionics systems. A robust recovery mechanism ensured safe retrieval, and a custom-built launch system supported the rocket's stability during takeoff. The project demonstrates the team's ability to integrate engineering principles with hands-on application, contributing valuable insights to model rocketry. Future iterations will focus on optimizing propulsion efficiency and exploring alternative recovery techniques. 
+          .</p>
+      </div>
+  
+      <!-- Skills (Updated Colors) -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">🛠️ Skills Applied</h3>
+        <div class="skill-tags">
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Solid Propulsion System</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;"> PCB designing and manufacturing</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Composite Body Manufacturing</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">MAchining</span>
+        </div>
+      </div>
+
+      <!-- Team Members Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">👥 Team Members</h3>
+        <ul style="color: white; list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Manish Tajpuriya(Project Leader)
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Sugam Lamsal
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Simran Paudel
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Prabin Bhattarai
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Raju Kumar Sah
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Sandesh Kunwar
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Bishal Karki
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Suyasha Wasti
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Aavash Dhakal
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Rejina Timelsina
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Niharika Bhattarai
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Mohan Prakash yadav
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Ananya Rijal
+          </li>
+          <!-- Add more members as needed -->
+        </ul>
+      </div>
+  
+      <!-- Project Status Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">📌 Project Status</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 12px; height: 12px; background: #64ffda; border-radius: 50%;"></div>
+          <p style="color: white; margin: 0;">Completed - (Oct. 2024 - Jan. 2025)</p>
+        </div>
+        <!-- Optional: Add links to documentation/demo -->
+        <a href="#contact" class="report-request-btn">
+          Request Final Report →
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="modal" id="vajra-modal">
     <div class="modal-content">
       <button class="close-modal" aria-label="Close modal"  style="color: #64ffda; font-size: 28px;">&times;</button>
@@ -482,14 +596,161 @@
         <h3 style="color: #64ffda; margin-top: 20px;">📌 Project Status</h3>
         <div style="display: flex; align-items: center; gap: 10px;">
           <div style="width: 12px; height: 12px; background: #64ffda; border-radius: 50%;"></div>
-          <p style="color: white; margin: 0;">Completed - March 2025</p>
+          <p style="color: white; margin: 0;">Completed - (Mar. 2024- Mar. 2025)</p>
         </div>
-        <!-- Optional: Add links to documentation/demo -->
-        <a href="#contact" style="display: inline-block; margin-top: 10px; color: #00d1ff; text-decoration: none;">
+        <a href="#contact" class="report-request-btn">
           Request Final Report →
         </a>
       </div>
     </div>
   </div>
+
+  <div class="modal" id="srb-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal"  style="color: #64ffda; font-size: 28px;">&times;</button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="img/SRB1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb4.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb5.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb6.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/srb7.png" alt="">
+            </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      <!-- Project Title -->
+      <h2 style="color: #64ffda;">Team SRB</h2>
+  
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">📌 Description</h3>
+        <p style="color: white;">Team SRB founded in year 2077B.S, is a group of undergrad student from IOE, Pulchowk Campus. I am the member of this team since its foundation and recently lead a project- "Project Trishul" which is the landmark project of this team. Beyond Project-Trishul several other projects are carried out by this team, whichc are listed below: 
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Project Barbarika: our first fully functional rocket
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Project Vajra – a demonstration of active attitude control using fins
+            Propellant characterization – research and experimentation with various solid formulations.
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Project Trishul: Highest Apogee of 2682m(8500ft.)
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Propellant characterization – research and experimentation with various solid formulations.
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Composite manufacturing – development of lightweight, reusable structural components.
+          </li>
+        </p>
+      </div>
+  
+      <!-- Skills (Updated Colors) -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda;">🛠️ Skills Applied</h3>
+        <div class="skill-tags">
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Solid Propulsion System</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;"> PCB designing and manufacturing</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">Composite Body Manufacturing</span>
+          <span style="background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid #64ffda;">MAchining</span>
+        </div>
+      </div>
+
+      <!-- Team Members Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">👥 Team Members</h3>
+        <ul style="color: white; list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Nischal Shrestha
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Mridul Neupane
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Sashakta Kharel
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Suneel Khadka
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Prashant Giri
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Manish Tajpuriya
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Sugam Lamsal
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Simran Paudel
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Prabin Bhattarai
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Raju Kumar Sah
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Sandesh Kunwar
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Bishal Karki
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Suyasha Wasti
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Aavash Dhakal
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Rejina Timelsina
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Niharika Bhattarai
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Mohan Prakash yadav
+          </li>
+          <li style="margin-bottom: 8px;">
+            <span style="color: #00d1ff;">•</span> Ananya Rijal
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Project Status Section -->
+      <div class="modal-section">
+        <h3 style="color: #64ffda; margin-top: 20px;">📌 Project Status</h3>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 12px; height: 12px; background: #64ffda; border-radius: 50%;"></div>
+          <p style="color: white; margin: 0;">Ongoing - (2020 - Present)</p>
+        </div>
+        <!-- Optional: Add links to documentation/demo -->
+        <a href="#contact" class="report-request-btn">
+          Request Final Report →
+        </a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
