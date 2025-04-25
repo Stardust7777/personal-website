@@ -60,19 +60,6 @@ function highlightProjects(categoryId) {
   });
 }
 
-// // Add event listeners to dropdown categories
-// projectCategories.forEach(category => {
-//   category.addEventListener('click', function (e) {
-//     e.preventDefault(); // Prevent default anchor behavior
-//     const categoryId = this.getAttribute('href'); // Get the category ID (e.g., #hypersonics)
-//     const targetSection = document.querySelector('#projects'); // Get the projects section
-//     if (targetSection) {
-//       targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the projects section
-//     }
-//     highlightProjects(categoryId); // Highlight projects for the selected category
-//   });
-// });
-
 projectCategories.forEach(category => {
   category.addEventListener('click', function(e) {
     e.preventDefault();
@@ -128,39 +115,6 @@ window.addEventListener('load', () => {
   const loading = document.getElementById('loading');
   loading.style.display = 'none';
 });
-
-
-// // Open modal
-// document.querySelectorAll('.learn-more').forEach(btn => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const modalId = btn.getAttribute('href');
-//     document.querySelector(modalId).style.display = 'flex';
-//   });
-// });
-
-// // Close modal - 100% reliable version
-// document.addEventListener('click', function(e) {
-//   // Close button click
-//   if (e.target.closest('.close-modal')) {
-//     e.preventDefault();
-//     const modal = e.target.closest('.modal');
-//     if (modal) modal.style.display = 'none';
-//   }
-//   // Click on modal overlay (outside content)
-//   else if (e.target.classList.contains('modal')) {
-//     e.target.style.display = 'none';
-//   }
-// });
-
-// // ESC key close (keep existing)
-// document.addEventListener('keydown', (e) => {
-//   if (e.key === 'Escape') {
-//     document.querySelectorAll('.modal').forEach(modal => {
-//       modal.style.display = 'none';
-//     });
-//   }
-// });
 
 // Combined modal handling in one clean function
 function handleModalActions() {
@@ -251,3 +205,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.querySelector('.btn').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent default anchor behavior
+  const projectsSection = document.getElementById('projects');
+  projectsSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+});
