@@ -41,21 +41,22 @@ window.addEventListener('scroll', () => {
 const projectCategories = document.querySelectorAll('.dropdown-content a');
 const projectCards = document.querySelectorAll('.project-card');
 const myProjectsLink = document.querySelector('.dropbtn'); // "My Projects" link
+const activeCategoryText = document.getElementById('active-category');
 
-// Function to reset all projects to default (no highlight)
 function resetProjects() {
   projectCards.forEach(card => {
-    card.classList.remove('highlight'); // Remove highlight class
+    card.style.display = 'block'; // Show all projects
   });
+  activeCategoryText.textContent = ''; // Clear the active category
 }
 
-// Function to highlight projects based on category
-function highlightProjects(categoryId) {
+function filterProjects(categoryId) {
   projectCards.forEach(card => {
-    if (card.getAttribute('data-category') === categoryId) {
-      card.classList.add('highlight'); // Add highlight class
+    const categories = card.getAttribute('data-category')?.split(' ') || [];
+    if (categories.includes(categoryId)) {
+      card.style.display = 'block'; // Show matching project
     } else {
-      card.classList.remove('highlight'); // Remove highlight class
+      card.style.display = 'none'; // Hide non-matching project
     }
   });
 }
@@ -64,23 +65,23 @@ projectCategories.forEach(category => {
   category.addEventListener('click', function(e) {
     e.preventDefault();
     const categoryId = this.getAttribute('href'); // e.g., "#rocketry"
+    const categoryName = this.textContent; // e.g., "Rocketry"
 
-    // Find the FIRST project card in this category
-    const firstCardInCategory = document.querySelector(
-      `.project-card[data-category="${categoryId}"]`
-    );
+    filterProjects(categoryId);
 
-    if (firstCardInCategory) {
-      firstCardInCategory.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start', // Aligns to the top of the viewport
-      });
+    // Update active category display
+    activeCategoryText.innerHTML = `Current Category: ${categoryName} <span style="color: gray; font-weight: normal;">[Click on Projects to reset view]</span>`;
 
-      // Optional: Highlight all cards in this category
-      highlightProjects(categoryId);
+    // Scroll to projects
+    const targetSection = document.querySelector('#projects');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
+
+
+
 
 // Add event listener to "My Projects" link to reset highlights
 myProjectsLink.addEventListener('click', function (e) {

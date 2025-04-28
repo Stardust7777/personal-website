@@ -21,7 +21,6 @@
   <div class="custom-loader"></div>
 </div>
 
-    <!-- Navigation Bar -->
 <!-- Navigation Bar -->
 <nav id="navbar">
   <div class="nav-content">
@@ -33,13 +32,14 @@
       <li class="dropdown">
         <a href="#projects" class="dropbtn">Projects</a>
         <div class="dropdown-content">
+          <a href="#avionics">Avionics</a>
+          <a href="#ai">AI</a>
+          <a href="#python">Python</a> 
+          <a href="#programming">Programming</a>
+          <a href="#controlsystem">Control system</a>
           <a href="#rocketry">Rocketry</a>
           <a href="#cfd">CFD</a>
-          <a href="#ai">AI</a>
-          <a href="#hypersonics">Hypersonics</a>
           <a href="#cad">CAD</a>
-          <a href="#controlsystem">Control system</a>
-          <a href="#electronics">Avionics</a>
           <a href="#propulsion">Propulsion</a>
           <a href="#aircraft">Aircraft</a>
           <a href="#hobby">Hobby Projects</a>          
@@ -51,14 +51,14 @@
   </div>
 </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero" data-aos="fade-up">
-    <div class="hero-content">
-      <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
-      <p>Aerospace Engineer | Rocketry Enthusiast | AI & Hypersonics</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section id="hero" class="hero" data-aos="fade-up">
+  <div class="hero-content">
+    <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
+    <p>Aerospace Engineer | Rocketry Enthusiast | AI & Hypersonics</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
 
 <!-- About Me Section -->
 <section id="about" class="about">
@@ -84,7 +84,7 @@
   </div>
 </section>
 
-  <!-- Skills Section -->
+<!-- Skills Section -->
 <section id="skills" class="skills">
     <h2>My Skills</h2>
     <div class="skills-grid">
@@ -158,8 +158,9 @@
 <!-- Projects Section -->
 <section id="projects" class="projects" data-id="trishul">
   <h2>My Projects</h2>
+  <div id="active-category" style="margin-bottom: 20px; font-size: 1.2rem; color: #00d1ff; font-weight: bold;"></div>
   <div class="project-grid">
-    <div class="project-card" data-category="#rocketry">
+    <div class="project-card" data-category="#avionics #rocketry #propulsion #programming">
       <img src="img/Trishul1.png" alt="Rocketry Project">
       <h3>Project Trishul</h3>
       <p>High powered rocket, reached an apogee of 8500ft, holding national record for student built rocket for highest apogee.</p>
@@ -169,7 +170,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#rocketry" data-id="vajra">
+    <div class="project-card" data-category="#controlsystem #programming #propulsion #avionics #rocketry" data-id="vajra">
       <img src="img/vajra1.jpg" alt="Rocketry Project">
       <h3>Project Vajra</h3>
       <p>Active attitude control (Pitch, yaw, and roll) of model rocket using fins. A PID-based control system.</p>
@@ -178,7 +179,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#rocketry" data-id="srb">
+    <div class="project-card" data-category="#rocketry #programming #avionics #propulsion" data-id="srb">
       <img src="img/SRB1.png" alt="Rocketry Project">
       <h3>Solid Rocket Booster(SRB)</h3>
       <p>A rocketry group of our college to carry out different research based project in the field of rocketry.</p>
@@ -207,7 +208,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#ai">
+    <div class="project-card" data-category="#python #programming #ai">
       <img src="img/stress PIN.gif" alt="PINN Project">
       <h3>Thermal Stress and Strain Analysis in a Cooling Glass Slab using PINN</h3>
       <p>Physics Informed Neural Network(PINN): Simulated development of thermal Stress and strain in a Cooling Glass Slab using PINN as part of my Internship at AnK.</p>
@@ -217,7 +218,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#ai">
+    <div class="project-card" data-category="#python #ai #programming">
       <img src="img/Problem_Statement.png" alt="PINN Project">
       <h3> 2D-cooling on glass slab using PINN</h3>
       <p>Physics Informed Neural Network(PINN): Simulated natural cooling of a 2D glass slab using PINN as part of my Internship at AnK.</p>
@@ -227,7 +228,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#ai">
+    <div class="project-card" data-category="#python #ai #programming">
       <img src="img/cht_com.png" alt="PINN Project">
       <h3> PINN - Tutorials</h3>
       <p>Some of the tutorials case I have run while working as an Intern at Accelerated Komputing as part of Learning Process.</p>
@@ -237,7 +238,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#cfd">
+    <div class="project-card" data-category="#cfd #cad">
       <img src="img/canard1.png" alt="CFD Project">
       <h3>Effect of sweep angle on lift characteristic of a canard fins</h3>
       <p>Case Study:Effect of sweep angle on lift characteristic of a canard fins was studied using simulations done on Ansys Fluent.</p>
@@ -247,7 +248,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#aircraft">
+    <div class="project-card" data-category="#aircraft #cad">
       <img src="img/apd5.png" alt=" Project">
       <h3>Flying Fox- The Loyal Wingman</h3>
       <p>Preliminary Design of a combat aircraft.</p>
@@ -257,7 +258,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#aircraft">
+    <div class="project-card" data-category="#aircraft #cad">
       <img src="img/am1.PNG" alt="Aircraft Project">
       <h3>Aircraft Design & Manufacturing</h3>
       <p>3D Design and Manufacturing of a model aircraft.</p>
@@ -277,7 +278,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#cfd">
+    <div class="project-card" data-category="#programming #cfd">
       <img src="img/fem1.png" alt="CFD Project">
       <h3>Matlab Code for mesh generation</h3>
       <p>A matlab program to generate and solve the 2-dimensional steady state heat problems.</p>
@@ -297,7 +298,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#hobby">
+    <div class="project-card" data-category="#avionics #programming #hobby">
       <img src="img/quantaqube.jpg" alt="Hobby Project">
       <h3>Quantacube</h3>
       <p>Assembled an 1U cubesat with Long Range communication, Power Management Module, and On-Board Computer as part of Satellite Training.</p>
@@ -307,7 +308,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#hobby">
+    <div class="project-card" data-category="#hobby #propulsion">
       <img src="img/hobbymotor4.jpg" alt="Hobby Project">
       <h3>Hobby Rocket Motor</h3>
       <p>Development of sugar based A class motor with locally available material.</p>
@@ -317,7 +318,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-category="#hobby">
+    <div class="project-card" data-category="#hobby #avionics #programming">
       <img src="img/hab4.png" alt="Hobby Project">
       <h3>Project Aarohan: High Altitude Balloon</h3>
       <p>Design, planning and fabrication of a 2 kg probe to be launched into space of altitude 30km.</p>
