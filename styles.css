@@ -903,10 +903,11 @@ table th, table td {
 #hobbies {
   background-color: #020C1B;
   padding: 40px;
+  margin-top: 40px;
 }
 
 .hobby-category {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .hobby-category h2 {
