@@ -892,3 +892,10 @@ table th, table td {
   text-align: center;
   border: 1px solid #aaa;
 }
+
+#percentageChart {
+  max-width: 100%;
+  height: 500px;  /* adjust this as needed */
+  margin: 40px auto;
+  display: block;
+}

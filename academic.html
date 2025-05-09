@@ -17,6 +17,7 @@
 
   <title>Academic Performance - Manish Tajpuriya</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -728,6 +729,58 @@
       </div>
     </section>
   </main>
+  <canvas id="percentageChart"></canvas>
+
+  <script>
+    const ctx = document.getElementById('percentageChart').getContext('2d');
+    const percentageChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          'Semester I', 'Semester II', 'Semester III', 'Semester IV',
+          'Semester V', 'Semester VI', 'Semester VII'
+        ],
+        datasets: [{
+          label: 'Semester Percentage',
+          data: [72.48, 75.20, 72.29, 76.14, 79.48, 85.13, 88.25], // update with actual values
+          fill: false,
+          borderColor: '#007acc',
+          backgroundColor: '#007acc',
+          tension: 0.3,
+          pointRadius: 5,
+          pointHoverRadius: 7
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+            min: 70,
+            max: 100,
+            title: {
+              display: true,
+              text: 'Percentage (%)'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+          title: {
+            display: true,
+            text: 'Semester-wise Academic Performance'
+          }
+        }
+      }
+    });
+  </script>
+  
   <footer>
     <p>&copy; 2025 Manish Tajpuriya. All rights reserved.</p>
     <div class="social-links">
