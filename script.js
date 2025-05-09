@@ -211,3 +211,8 @@ document.querySelector('.btn').addEventListener('click', function(e) {
   const projectsSection = document.getElementById('projects');
   projectsSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
 });
+
+function toggleSemester(id) {
+  const element = document.getElementById(id);
+  element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+}
