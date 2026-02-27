@@ -978,3 +978,255 @@ table th, table td {
     box-sizing: border-box;
   }
 }
+
+
+/* Experience Section */
+.experience {
+    padding: 80px 0;
+    background-color: #020C1B;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #CCD6F6;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #64FFDA;
+    margin: 0.5rem auto 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: rgba(100, 255, 218, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #64FFDA;
+    box-shadow: 0 0 10px #64FFDA;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: rgba(100, 255, 218, 0.03);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    border-color: #64FFDA;
+}
+
+.timeline-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-header h3 {
+    color: #64FFDA;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.timeline-header .company {
+    color: #8892B0;
+    font-size: 0.95rem;
+}
+
+.timeline-header .date {
+    color: #64FFDA;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-left: auto;
+}
+
+.timeline-subtitle {
+    color: #8892B0;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.timeline-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #CCD6F6;
+}
+
+.timeline-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.timeline-list li::marker {
+    color: #64FFDA;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+    
+    .timeline-dot {
+        left: 7px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .timeline-header {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .timeline-header .date {
+        margin-left: 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content {
+        padding: 1rem;
+    }
+}
+
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #64FFDA;
+    border: 2px solid #64FFDA;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.resume-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+.resume-btn i {
+    font-size: 1.1rem;
+}
+
+/* Floating Download Button with Tooltip */
+.floating-download {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.float-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #64FFDA;
+    color: #020C1B;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(100, 255, 218, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.float-btn:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #64FFDA;
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.5);
+}
+
+/* Tooltip */
+.float-btn .tooltip {
+    position: absolute;
+    right: 70px;
+    background-color: #64FFDA;
+    color: #020C1B;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.float-btn .tooltip::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #64FFDA;
+}
+
+.float-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 75px;
+}

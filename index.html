@@ -28,6 +28,7 @@
     <ul class="nav-links">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li class="dropdown">
         <a href="#projects" class="dropbtn">Projects</a>
         <div class="dropdown-content">
@@ -57,6 +58,9 @@
     <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
     <p>Aerospace Engineer |Aerodynamics | Propulsion | Flight Controls | Avionics</p>
     <a href="#projects" class="btn">View My Work</a>
+    <a href="CV__Manish_Tajpuriya.pdf" class="resume-btn" download>
+    <i class="fas fa-download"></i> Download Resume
+</a>
   </div>
 </section>
 
@@ -80,6 +84,51 @@
       <img src="img/PP-1C.webp" alt="Your Name" class="highlight"> <!-- Add highlight class -->
     </div>
   </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="timeline">
+            <!-- Airbus Internship -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>System Test Engineer – Internship</h3>
+                        <span class="company">Airbus India Private Limited</span>
+                        <span class="date">Jul 2025 – Present</span>
+                    </div>
+                    <p class="timeline-subtitle">Integration, Test, and Analytics | Autoflight and Maintenance Systems</p>
+                    <ul class="timeline-list">
+                        <li>Analysed defects in the new Flight Management System (nFMS)</li>
+                        <li>Authored and executed Test procedures and reviewed VVOs</li>
+                        <li>Built automation utilities to support defect analysis workflows for the FMS team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AnK Internship -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Internship – Physics-Informed Neural Network</h3>
+                        <span class="company">AnK (Accelerated Komputing)</span>
+                        <span class="date">Sep 2024 – Nov 2024</span>
+                    </div>
+                    <p class="timeline-subtitle">AI/ML-based simulation for thermal stress analysis in aerospace structures</p>
+                    <ul class="timeline-list">
+                        <li>Programmed physics-informed models with Python using the Modulus framework to simulate transient heat transfer and thermal stress fields in 2D plates</li>
+                        <li>Incorporated Neumann boundary conditions using 'DiffusionInterface', animated time-evolution of temperature/stress</li>
+                        <li>Validated results with other commercial solvers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Projects Section -->
@@ -805,5 +854,15 @@
     </div>
   </div>
 
+
+<!-- Floating Download Button with Tooltip -->
+<div class="floating-download">
+    <a href="resume.pdf" class="float-btn" download title="Download Resume">
+        <i class="fas fa-download"></i>
+        <span class="tooltip">Download Resume</span>
+    </a>
+</div>
+
+</div>
 </body>
 </html>
