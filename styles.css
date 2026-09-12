@@ -1238,19 +1238,47 @@ section[id] {
     scroll-margin-top: 70px;
 }
 
-/* Large screens: let content breathe instead of capping at 1200px */
-@media (min-width: 1500px) {
-  .nav-content,
-  .about-content,
-  .skills-grid,
-  .project-grid,
-  .blog-posts,
-  .timeline {
-    max-width: 1400px;
-  }
-  .contact-form {
-    max-width: 700px;
-  }
+/* Full-width fluid layout: content stretches to fit the screen */
+.nav-content,
+.about-content,
+.skills-grid,
+.project-grid,
+.blog-posts,
+.timeline {
+  max-width: none;
+}
+
+.nav-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.about,
+.skills,
+.projects,
+.blog,
+.contact {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.experience {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+.project-grid,
+.blog-posts,
+.hobby-gallery {
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+}
+
+.contact-form {
+  max-width: 900px;
 }
 
 /* Fluid hero heading so it scales with the viewport */
@@ -1385,4 +1413,138 @@ section[id] {
     height: auto;
     max-height: 320px;
   }
+}
+
+/* ===== Horizontal project cards (full-width rows, like Experience) ===== */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  text-align: left;
+  background: rgba(100, 255, 218, 0.03);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 8px;
+  min-height: 190px;
+}
+
+.project-card:hover {
+  transform: translateX(5px);
+  border-color: #64FFDA;
+}
+
+.project-card img {
+  grid-row: 1 / -1;
+  height: 100%;
+  min-height: 100%;
+  border-radius: 0;
+  border-right: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: #64FFDA;
+  margin: 18px 24px 0;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  padding: 8px 24px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.project-card .project-links {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 14px 24px 18px;
+}
+
+.project-card .project-links .btn {
+  background: transparent;
+  color: #64FFDA;
+  border: 1px solid #64FFDA;
+  padding: 8px 18px;
+  font-weight: 500;
+}
+
+.project-card .project-links .btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .project-card img {
+    grid-row: auto;
+    height: 180px;
+    min-height: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  }
+
+  .project-card h3 {
+    margin: 20px 20px 0;
+  }
+
+  .project-card p {
+    padding: 10px 20px 0;
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+  }
+
+  .project-card .project-links {
+    margin: 16px 20px 20px;
+  }
+}
+
+/* ===== Skills section in Experience style ===== */
+.skill {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  align-items: center;
+  text-align: left;
+  background: rgba(100, 255, 218, 0.03);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: none;
+}
+
+.skill:hover {
+  transform: translateX(5px);
+  border-color: #64FFDA;
+}
+
+.skill i {
+  font-size: 2rem;
+  color: #64FFDA;
+  margin-bottom: 0;
+}
+
+.skill h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.skill .progress-bar {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
 }

@@ -53,7 +53,7 @@ const activeCategoryText = document.getElementById('active-category');
 
 function resetProjects() {
   projectCards.forEach(card => {
-    card.style.display = 'block'; // Show all projects
+    card.style.display = ''; // Show all projects
   });
   activeCategoryText.textContent = ''; // Clear the active category
 }
@@ -62,7 +62,7 @@ function filterProjects(categoryId) {
   projectCards.forEach(card => {
     const categories = card.getAttribute('data-category')?.split(' ') || [];
     if (categories.includes(categoryId)) {
-      card.style.display = 'block'; // Show matching project
+      card.style.display = ''; // Show matching project
     } else {
       card.style.display = 'none'; // Hide non-matching project
     }
