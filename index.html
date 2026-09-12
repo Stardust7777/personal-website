@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manish Tajpuriya</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <meta name="theme-color" content="#0b1526">
   <link rel="stylesheet" href="styles.css?v=1.1"> <!--adding cache buster to css file-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -24,8 +27,13 @@
 <!-- Navigation Bar -->
 <nav id="navbar">
   <div class="nav-content">
-    <a href="#hero" class="logo"><img src="img/logo1.png" alt="Logo" class="nav-logo">Manish Tajpuriya</a>
-    <ul class="nav-links">
+    <a href="#hero" class="logo"><img src="img/logo.svg" alt="Manish Tajpuriya logo" class="nav-logo">Manish Tajpuriya</a>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="primary-navigation">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -56,7 +64,7 @@
 <section id="hero" class="hero" data-aos="fade-up">
   <div class="hero-content">
     <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
-    <p>Aerospace Engineer |Aerodynamics | Propulsion | Flight Controls | Avionics</p>
+    <p> Flight Controls | Aerodynamics | Propulsion | Flight Dynamics </p>
     <a href="#projects" class="btn">View My Work</a>
     <a href="CV__Manish_Tajpuriya.pdf" class="resume-btn" download>
     <i class="fas fa-download"></i> Download Resume

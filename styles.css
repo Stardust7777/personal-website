@@ -1230,3 +1230,159 @@ table th, table td {
     visibility: visible;
     right: 75px;
 }
+
+/* ===== Layout width + responsive navigation fixes ===== */
+
+/* Keep section tops clear of the fixed navbar when smooth-scrolling */
+section[id] {
+    scroll-margin-top: 70px;
+}
+
+/* Large screens: let content breathe instead of capping at 1200px */
+@media (min-width: 1500px) {
+  .nav-content,
+  .about-content,
+  .skills-grid,
+  .project-grid,
+  .blog-posts,
+  .timeline {
+    max-width: 1400px;
+  }
+  .contact-form {
+    max-width: 700px;
+  }
+}
+
+/* Fluid hero heading so it scales with the viewport */
+.hero h1 {
+  font-size: clamp(2rem, 6vw + 1rem, 3.5rem);
+}
+
+/* Hamburger button chrome (visibility is controlled below) */
+.menu-toggle {
+  background: transparent;
+  border: 1px solid rgba(0, 209, 255, 0.4);
+  border-radius: 6px;
+  padding: 7px 9px;
+}
+
+.menu-toggle:hover {
+  background: rgba(0, 209, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about,
+  .skills,
+  .projects,
+  .blog,
+  .contact {
+    padding: 60px 16px;
+  }
+
+  .hero {
+    padding: 120px 16px 80px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .about-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Navbar becomes logo left + hamburger right */
+  .nav-content {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+
+  /* Links become a dropdown panel under the bar */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: #0A192F;
+    border-top: 1px solid rgba(0, 209, 255, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+    padding: 8px 20px 16px;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links > li > a {
+    display: block;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(204, 214, 246, 0.12);
+  }
+
+  .nav-links > li:last-child > a {
+    border-bottom: none;
+  }
+
+  /* Projects submenu opens by tap instead of hover */
+  .dropdown {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-left: 2px solid rgba(0, 209, 255, 0.4);
+    margin: 4px 0 8px 4px;
+    min-width: 0;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    padding: 10px 12px;
+  }
+
+  /* Wide tables scroll instead of breaking the layout */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  #percentageChart {
+    height: auto;
+    max-height: 320px;
+  }
+}

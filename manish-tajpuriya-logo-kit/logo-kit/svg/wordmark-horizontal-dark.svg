@@ -1,0 +1,30 @@
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="900" height="240" fill="#0b1526"/>
+  <g transform="translate(0 0)">
+    <!-- Orbital ring -->
+  <ellipse cx="120" cy="120" rx="104" ry="70"
+           transform="rotate(-18 120 120)"
+           fill="none" stroke="#7fa8ff" stroke-width="3.5"
+           stroke-dasharray="2 10" stroke-linecap="round" opacity="0.65"/>
+
+  <!-- Satellite/aircraft node -->
+  <g transform="rotate(-18 120 120)">
+    <circle cx="224" cy="120" r="6" fill="#7fa8ff"/>
+    <circle cx="224" cy="120" r="10" fill="none" stroke="#7fa8ff" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Wing accent -->
+  <path d="M 202 66 L 240 50 L 206 86 L 202 66 Z" fill="#7fa8ff"/>
+
+  <!-- Monogram in white -->
+  <g fill="#ffffff">
+    <path d="M 46 182 L 46 66 L 62 66 L 92 118 L 122 66 L 138 66 L 138 182
+             L 118 182 L 118 104 L 96 142 L 88 142 L 66 104 L 66 182 Z"/>
+    <path d="M 124 66 L 202 66 L 202 84 L 172 84 L 172 182 L 152 182 L 152 84 L 124 84 Z"/>
+  </g>
+  </g>
+  <text x="270" y="122" font-family="Helvetica, Arial, sans-serif" font-weight="700"
+        font-size="56" letter-spacing="1" fill="#ffffff">MANISH TAJPURIYA</text>
+  <text x="272" y="160" font-family="Helvetica, Arial, sans-serif" font-weight="500"
+        font-size="26" letter-spacing="3" fill="#7fa8ff">AEROSPACE ENGINEER</text>
+</svg>

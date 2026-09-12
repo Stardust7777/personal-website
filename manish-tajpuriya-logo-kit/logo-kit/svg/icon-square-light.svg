@@ -1,0 +1,36 @@
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="320" height="320" rx="64" fill="#ffffff"/>
+  <rect x="2" y="2" width="316" height="316" rx="62" fill="none" stroke="#e5e7eb" stroke-width="3"/>
+  <g transform="translate(40 40)">
+    <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16233f"/>
+      <stop offset="100%" stop-color="#0b1526"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Orbital ring: suggests a flight path / satellite orbit around the mark -->
+  <ellipse cx="120" cy="120" rx="104" ry="70"
+           transform="rotate(-18 120 120)"
+           fill="none" stroke="#2f6fed" stroke-width="3.5"
+           stroke-dasharray="2 10" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Satellite/aircraft node riding the orbit -->
+  <g transform="rotate(-18 120 120)">
+    <circle cx="224" cy="120" r="6" fill="#2f6fed"/>
+    <circle cx="224" cy="120" r="10" fill="none" stroke="#2f6fed" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Swept wing accent, flicking off the T's top-right corner -->
+  <path d="M 202 66 L 240 50 L 206 86 L 202 66 Z" fill="#2f6fed"/>
+
+  <!-- Monogram: solid, bolder M + T, merged at a shared stroke -->
+  <g fill="url(#navyGrad)">
+    <!-- M -->
+    <path d="M 46 182 L 46 66 L 62 66 L 92 118 L 122 66 L 138 66 L 138 182
+             L 118 182 L 118 104 L 96 142 L 88 142 L 66 104 L 66 182 Z"/>
+    <!-- T, crossbar sweeping up to meet the wing accent -->
+    <path d="M 124 66 L 202 66 L 202 84 L 172 84 L 172 182 L 152 182 L 152 84 L 124 84 Z"/>
+  </g>
+  </g>
+</svg>

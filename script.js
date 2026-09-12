@@ -4,8 +4,16 @@ const navLinks = document.querySelectorAll('.nav-links a'); // Get all navigatio
 // Smooth scroll for navigation links
 navLinks.forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
     const targetId = this.getAttribute('href'); // Get the target section ID
+    // Let cross-page links (e.g. "index.html#about" on sub-pages) navigate normally
+    if (!targetId || !targetId.startsWith('#')) {
+      return;
+    }
+    // On mobile the "Projects" parent toggles its submenu instead of scrolling
+    if (this.classList.contains('dropbtn') && window.matchMedia('(max-width: 768px)').matches) {
+      return;
+    }
+    e.preventDefault(); // Prevent default anchor behavior
     const targetSection = document.querySelector(targetId); // Find the target section
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
@@ -215,4 +223,48 @@ document.querySelector('.btn').addEventListener('click', function(e) {
 function toggleSemester(id) {
   const element = document.getElementById(id);
   element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+}
+
+// Mobile hamburger menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinksList = document.querySelector('.nav-links');
+
+if (menuToggle && navLinksList) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinksList.classList.toggle('active');
+    menuToggle.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close the menu after tapping a link (submenu parent handled separately)
+  navLinksList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.classList.contains('dropbtn')) return;
+      navLinksList.classList.remove('active');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      const dropdown = navLinksList.querySelector('.dropdown');
+      if (dropdown) dropdown.classList.remove('open');
+    });
+  });
+
+  // Tap-to-open Projects submenu on touch screens
+  const dropBtn = navLinksList.querySelector('.dropbtn');
+  const dropdown = navLinksList.querySelector('.dropdown');
+  if (dropBtn && dropdown) {
+    dropBtn.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        dropdown.classList.toggle('open');
+      }
+    });
+  }
+
+  // Close the menu with the Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      navLinksList.classList.remove('active');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }

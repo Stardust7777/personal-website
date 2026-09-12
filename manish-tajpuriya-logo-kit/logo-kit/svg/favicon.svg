@@ -1,0 +1,10 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified for small sizes: bold monogram only, no fine orbit lines -->
+  <rect x="0" y="0" width="240" height="240" rx="48" fill="#0b1526"/>
+  <path d="M 190 60 L 220 48 L 194 76 L 190 60 Z" fill="#7fa8ff"/>
+  <g fill="#ffffff">
+    <path d="M 44 184 L 44 64 L 61 64 L 92 118 L 123 64 L 140 64 L 140 184
+             L 119 184 L 119 104 L 96 143 L 88 143 L 65 104 L 65 184 Z"/>
+    <path d="M 126 64 L 204 64 L 204 83 L 174 83 L 174 184 L 153 184 L 153 83 L 126 83 Z"/>
+  </g>
+</svg>
