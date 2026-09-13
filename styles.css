@@ -1,7 +1,7 @@
 /* General Styles */
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     margin: 0;
     padding: 0;
     color: #CCD6F6;
@@ -32,19 +32,54 @@ body {
     font-weight: bold;
     color: #00D1FF;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
   }
 
   .nav-logo {
-    height: 30px; /* Adjust size */
+    height: 1.5em;
     width: auto;
-    margin-right: 10px;
-    vertical-align: middle; /* Aligns with text */
+    flex-shrink: 0;
+    display: block;
+  }
+
+  /* Paper-plane orbit around navbar name — plane points along direction of travel */
+  .nav-orbit {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.3em;
+  }
+
+  .nav-plane {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 0.65rem;
+    line-height: 1;
+    color: #64FFDA;
+    pointer-events: none;
+    animation: plane-orbit 5s linear infinite;
+  }
+
+  .nav-plane i {
+    display: block;
+  }
+
+  @keyframes plane-orbit {
+    from {
+      transform: rotate(0deg) translateX(58px) translateY(-7px) rotate(90deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(58px) translateY(-7px) rotate(450deg);
+    }
   }
   
   /* For mobile responsiveness */
   @media (max-width: 768px) {
     .nav-logo {
-      height: 24px;
+      height: 1.5em;
     }
   }
   
@@ -120,11 +155,214 @@ body {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
+
+  /* Hero + About merged — compact two-column intro */
+  .hero-about {
+    background-color: #020C1B;
+    color: #CCD6F6;
+    padding: 120px 40px 48px;
+  }
+
+  .hero-about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 340px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-about-text {
+    min-width: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 5vw + 1rem, 3rem);
+    margin-bottom: 6px;
+    color: #00D1FF;
+    line-height: 1.15;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+    color: #CCD6F6;
+  }
+
+  .about-inline {
+    scroll-margin-top: 70px;
+  }
+
+  .about-inline h2 {
+    font-size: 1.8rem;
+    margin: 8px 0 10px;
+    color: #00D1FF;
+  }
+
+  .about-inline p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #CCD6F6;
+    margin: 0 0 12px;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+    align-items: center;
+  }
+
+  .hero-cta .resume-btn {
+    margin: 0;
+  }
+
+  .hero-about-image {
+    text-align: center;
+    position: relative;
+  }
+
+  .hero-about-image img {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Rocket launch on the right-hand side of the picture */
+  .rocket-launch {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    width: 54px;
+    height: 230px;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .launch-rocket {
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    font-size: 1.6rem;
+    color: #CCD6F6;
+    animation: rocket-launch 4.5s ease-in infinite;
+  }
+
+  .launch-rocket i {
+    display: block;
+    transform: rotate(-45deg);
+  }
+
+  .launch-flame {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    width: 8px;
+    height: 18px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, #64FFDA, #00D1FF 60%, transparent);
+    border-radius: 50% 50% 20% 20%;
+    filter: blur(0.5px);
+    animation: flame-flicker 4.5s ease-in infinite;
+  }
+
+  .launch-smoke span {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(204, 214, 246, 0.65);
+    filter: blur(1px);
+    opacity: 0;
+    animation: smoke-puff 4.5s ease-out infinite;
+  }
+
+  .launch-smoke span:nth-child(2) {
+    width: 16px;
+    height: 16px;
+    animation-delay: 0.15s;
+  }
+
+  .launch-smoke span:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes rocket-launch {
+    0% {
+      transform: translateX(-50%) translateY(70px);
+      opacity: 0;
+    }
+    12% {
+      opacity: 1;
+    }
+    72% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-175px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes flame-flicker {
+    0%, 12% { opacity: 0; transform: translateX(-50%) scaleY(0.6); }
+    18% { opacity: 1; transform: translateX(-50%) scaleY(1); }
+    70% { opacity: 1; }
+    85%, 100% { opacity: 0; transform: translateX(-50%) scaleY(0.7); }
+  }
+
+  @keyframes smoke-puff {
+    0% {
+      transform: translateX(-50%) translateY(0) scale(0.5);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.8;
+    }
+    60% {
+      opacity: 0.45;
+    }
+    100% {
+      transform: translateX(-50%) translateY(46px) scale(2.4);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-plane,
+    .rocket-launch {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-about {
+      padding: 110px 20px 40px;
+    }
+    .hero-about-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .hero-name {
+      font-size: clamp(1.7rem, 8vw, 2.4rem);
+    }
+    .hero-about-image img {
+      max-width: 280px;
+    }
+    .rocket-launch {
+      height: 200px;
+      right: 14px;
+    }
+  }
   
   /* About Me Section */
   .about {
     padding: 100px 20px;
-    background-color: #0A192F;
+    background-color: #020C1B;
   }
   
   .about-content {
@@ -217,7 +455,7 @@ body {
   /* Skills Section */
 .skills {
     padding: 100px 20px;
-    background-color: #0A192F;
+    background-color: #020C1B;
     text-align: center;
   }
   
@@ -362,7 +600,7 @@ body {
   /* Contact Section */
 .contact {
     padding: 100px 20px;
-    background-color: #0A192F;
+    background-color: #020C1B;
     text-align: center;
   }
   
@@ -1145,7 +1383,7 @@ table th, table td {
     border: 2px solid #64FFDA;
     padding: 12px 28px;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
@@ -1210,7 +1448,7 @@ table th, table td {
     visibility: hidden;
     transition: all 0.3s ease;
     pointer-events: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1424,13 +1662,13 @@ section[id] {
 
 .project-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 300px 1fr;
   text-align: left;
   background: rgba(100, 255, 218, 0.03);
   border: 1px solid rgba(100, 255, 218, 0.1);
   border-radius: 8px;
   min-height: 190px;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -1439,33 +1677,126 @@ section[id] {
 }
 
 .project-card img {
-  grid-row: 1 / -1;
+  width: 100%;
   height: 100%;
-  min-height: 100%;
+  min-height: 280px;
+  object-fit: cover;
   border-radius: 0;
   border-right: 1px solid rgba(100, 255, 218, 0.1);
 }
 
-.project-card h3 {
+/* Body wraps all text content (Experience-style) — all children flush-left aligned */
+.project-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.project-body > * {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card h3,
+.project-header h3 {
   font-size: 1.25rem;
   color: #64FFDA;
-  margin: 18px 24px 0;
+  margin: 0;
+}
+
+.project-date {
+  color: #64FFDA;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.project-subtitle {
+  color: #8892B0;
+  font-size: 0.92rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Skills list right below title — flush left, aligned with title/subtitle/bullets */
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-skills span {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  transition: all 0.3s;
+}
+
+.project-skills span:hover {
+  background: rgba(100, 255, 218, 0.2) !important;
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
+}
+
+/* Bullet points — flush left, no indent, aligned with title/skills */
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #CCD6F6;
+}
+
+.project-list li {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  padding: 0;
+}
+
+.project-list li::before {
+  content: none;
+}
+
+.project-list li::marker {
+  content: none;
 }
 
 .project-card p {
   font-size: 0.95rem;
-  padding: 8px 24px 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  line-clamp: 3;
-  overflow: hidden;
+  color: #CCD6F6;
+  margin: 0;
+  line-height: 1.55;
 }
 
 .project-card .project-links {
+  display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 14px 24px 18px;
+  gap: 10px;
+  margin: 6px 0 0;
+  padding-top: 4px;
 }
 
 .project-card .project-links .btn {
@@ -1489,27 +1820,27 @@ section[id] {
   }
 
   .project-card img {
-    grid-row: auto;
-    height: 180px;
+    height: 200px;
     min-height: 0;
     border-right: none;
     border-bottom: 1px solid rgba(100, 255, 218, 0.1);
   }
 
-  .project-card h3 {
-    margin: 20px 20px 0;
+  .project-body {
+    padding: 20px;
   }
 
-  .project-card p {
-    padding: 10px 20px 0;
-    display: block;
-    -webkit-line-clamp: unset;
-    line-clamp: unset;
-    overflow: visible;
+  .project-header {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .project-date {
+    margin-left: 0;
   }
 
   .project-card .project-links {
-    margin: 16px 20px 20px;
+    margin: 10px 0 0;
   }
 }
 

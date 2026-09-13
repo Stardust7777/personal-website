@@ -11,9 +11,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="manifest" href="img/site.webmanifest">
   <meta name="theme-color" content="#0b1526">
-  <link rel="stylesheet" href="styles.css?v=1.5"> <!--adding cache buster to css file-->
+  <link rel="stylesheet" href="styles.css?v=2.1"> <!--adding cache buster to css file-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
@@ -27,7 +29,7 @@
 <!-- Navigation Bar -->
 <nav id="navbar">
   <div class="nav-content">
-    <a href="#hero" class="logo"><img src="img/logo.svg" alt="Manish Tajpuriya logo" class="nav-logo">Manish Tajpuriya</a>
+    <a href="#hero" class="logo"><img src="img/logo.svg" alt="Manish Tajpuriya logo" class="nav-logo"><span class="nav-orbit">Manish Tajpuriya<span class="nav-plane" aria-hidden="true"><i class="fas fa-paper-plane"></i></span></span></a>
     <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -60,36 +62,37 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section id="hero" class="hero" data-aos="fade-up">
-  <div class="hero-content">
-    <h1><span id="typed-text"></span><span id="cursor">|</span></h1>
-    <p> Flight Controls | Aerodynamics | Propulsion | Flight Dynamics </p>
-    <a href="#projects" class="btn">View My Work</a>
-    <a href="CV__Manish_Tajpuriya.pdf" class="resume-btn" download>
-    <i class="fas fa-download"></i> Download Resume
-</a>
-  </div>
-</section>
-
-<!-- About Me Section -->
-<section id="about" class="about">
-  <div class="about-content">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-      An aspiring aerospace engineer with hands-on experience across Aerodynamics, Flight Control, Propulsion Systems, Avionics , CFD and AI. Experiencecd with MATLAB, Simulink, Python programming and modern libraries for data analysis, automation, and AI/ML (PINNs). 
-      </p>
-      <p>
-      Proven track record in leading multidisciplinary projects, from rocket system integration and satellite avionics to high-altitude platforms. Passionate about solving real-world aerospace challenges through continuous learning and contributing in making a real impact.
-      </p>
-      <div class="about-buttons">
+<!-- Hero + About merged (saves vertical space) -->
+<section id="hero" class="hero-about" data-aos="fade-up">
+  <div class="hero-about-grid">
+    <div class="hero-about-text">
+      <h1 class="hero-name"><span id="typed-text"></span><span id="cursor">|</span></h1>
+      <p class="hero-tagline">Flight Controls | Aerodynamics | Propulsion | Flight Dynamics</p>
+      <div id="about" class="about-inline">
+        <h2>About Me</h2>
+        <p>
+        An aspiring aerospace engineer with hands-on experience across Aerodynamics, Flight Control, Propulsion Systems, Avionics , CFD and AI. Experiencecd with MATLAB, Simulink, Python programming and modern libraries for data analysis, automation, and AI/ML (PINNs). 
+        </p>
+        <p>
+        Proven track record in leading multidisciplinary projects, from rocket system integration and satellite avionics to high-altitude platforms. Passionate about solving real-world aerospace challenges through continuous learning and contributing in making a real impact.
+        </p>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="CV__Manish_Tajpuriya.pdf" class="resume-btn" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
         <a href="academic.html" class="btn btn-academic">Academic Performance</a>
         <a href="hobbies.html" class="btn btn-hobbies">My Hobbies</a>
       </div>
     </div>
-    <div class="about-image">
-      <img src="img/PP-1C.webp" alt="Your Name" class="highlight"> <!-- Add highlight class -->
+    <div class="about-image hero-about-image">
+      <img src="img/PP-1C.webp" alt="Manish Tajpuriya" class="highlight">
+      <div class="rocket-launch" aria-hidden="true">
+        <div class="launch-smoke"><span></span><span></span><span></span></div>
+        <div class="launch-flame"></div>
+        <div class="launch-rocket"><i class="fas fa-rocket"></i></div>
+      </div>
     </div>
   </div>
 </section>
@@ -146,155 +149,413 @@
   <div class="project-grid">
     <div class="project-card" data-category="#avionics #rocketry #propulsion #programming">
       <img src="img/Trishul1.webp" alt="Rocketry Project">
-      <h3>Project Trishul</h3>
-      <p>High powered rocket, reached an apogee of 8500ft, holding national record for student built rocket for highest apogee.</p>
-      <div class="project-links">
-        <a href="https://youtu.be/Js4Dl5qeV8o?si=ROTylaExx95D6jsa" class="btn">Documentary Video</a>
-        <a href="#trishul-modal" class="btn learn-more">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Project Trishul</h3>
+          <span class="project-date">Oct 2023 – Jan 2025</span>
+        </div>
+        <p class="project-subtitle">Design, Fabrication, and Launch of a 3km Altitude-Class Rocket | Project Lead – Avionics & System Integration</p>
+        <div class="project-skills">
+          <span>Teensy 4.1</span>
+          <span>IMU + Barometer</span>
+          <span>LoRa RA-02</span>
+          <span>Dual Deployment</span>
+          <span>System Testing</span>
+        </div>
+        <ul class="project-list">
+          <li>Developed custom avionics module using Teensy 4.1 with IMU, barometer, and RA-02 LoRa for real-time telemetry and data acquisition.</li>
+          <li>Designed and verified dual-parachute deployment with altitude-decrement logic and timer redundancy via MOSFET actuation.</li>
+          <li>Led system-level testing and launch reporting — national record 2682 m apogee for a student-built rocket in Nepal.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://youtu.be/Js4Dl5qeV8o?si=ROTylaExx95D6jsa" class="btn">Documentary Video</a>
+          <a href="#trishul-modal" class="btn learn-more">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#controlsystem #programming #propulsion #avionics #rocketry" data-id="vajra">
       <img src="img/vajra1.webp" alt="Rocketry Project">
-      <h3>Project Vajra</h3>
-      <p>Active attitude control (Pitch, yaw, and roll) of model rocket using fins. A PID-based control system.</p>
-      <div class="project-links">
-        <a href="#vajra-modal" class="btn learn-more">Learn more</a> <!-- Link triggers modal -->
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Project Vajra – Active Fin-Controlled Rocket</h3>
+          <span class="project-date">Mar 2024 – Feb 2025</span>
+        </div>
+        <p class="project-subtitle">Integrated Control System for Rocket Attitude Stabilization | Final Year Project</p>
+        <div class="project-skills">
+          <span>PID Control</span>
+          <span>MATLAB / Simulink</span>
+          <span>IMU Feedback</span>
+          <span>Wind Tunnel</span>
+          <span>Flight Testing</span>
+        </div>
+        <ul class="project-list">
+          <li>Designed and tuned PID flight control laws for pitch and roll axes in MATLAB/Simulink across varying aerodynamic conditions.</li>
+          <li>Implemented in-flight attitude control using IMU-derived attitude and angular-rate feedback with servo-actuated fins.</li>
+          <li>Validated closed-loop performance with flight-data simulation, wind-tunnel testing, and successful flight tests.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#vajra-modal" class="btn learn-more">Learn more</a> <!-- Link triggers modal -->
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#rocketry #programming #avionics #propulsion" data-id="srb">
       <img src="img/SRB1.webp" alt="Rocketry Project">
-      <h3>Solid Rocket Booster(SRB)</h3>
-      <p>A rocketry group of our college to carry out different research based project in the field of rocketry.</p>
-      <div class="project-links">
-        <a href="#srb-modal" class="btn learn-more">Learn more</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Solid Rocket Booster (SRB) – Team SRB</h3>
+          <span class="project-date">2021 – 2025</span>
+        </div>
+        <p class="project-subtitle">Founding Member | Avionics, Recovery, Propulsion & System Integration</p>
+        <div class="project-skills">
+          <span>Solid Propulsion</span>
+          <span>Avionics</span>
+          <span>Telemetry</span>
+          <span>Composites</span>
+          <span>Machining</span>
+        </div>
+        <ul class="project-list">
+          <li>Founding member specializing in vehicle integration and avionics — microcontroller programming, telemetry setup, and sensor testing.</li>
+          <li>Hands-on across propulsion characterization, recovery, composite manufacturing, and machining; validated subsystems in static and flight tests.</li>
+          <li>Led landmark Project Trishul within the team alongside Projects Barbarika and Vajra.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#srb-modal" class="btn learn-more">Learn more</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#cfd">
       <img src="img/Naturalconvection.webp" alt="CFD Project">
-      <h3>Natural convection in a closed cavity</h3>
-      <p>An openfoam simulation(transient) of natural convection in a closed cavity.Study the effects of different length of heated wall.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn more</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Natural Convection in a Closed Cavity</h3>
+          <span class="project-date">2023 – 2025</span>
+        </div>
+        <p class="project-subtitle">CFD Case Study | OpenFOAM – buoyantPimpleFoam (Transient)</p>
+        <div class="project-skills">
+          <span>OpenFOAM</span>
+          <span>buoyantPimpleFoam</span>
+          <span>Heat Transfer</span>
+          <span>Transient</span>
+        </div>
+        <ul class="project-list">
+          <li>Simulated transient natural convection in a closed cavity to assess gravity and heat-source effects on flow and temperature.</li>
+          <li>Studied effect of heated-wall length on circulation and thermal stratification.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn more</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#cfd">
       <img src="img/backwardfacingstep1.webp" alt="CFD Project">
-      <h3>Flow through Backward Facing Step</h3>
-      <p>An openfoam simulation(transient) of Flow through Backward Facing Step.Comparison of reattachment length in laminar and turbulent flow</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn more</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Flow Through Backward-Facing Step</h3>
+          <span class="project-date">2023 – 2025</span>
+        </div>
+        <p class="project-subtitle">CFD Case Study | OpenFOAM – Transient + k-ε Turbulence</p>
+        <div class="project-skills">
+          <span>OpenFOAM</span>
+          <span>icoFoam</span>
+          <span>k-ε Model</span>
+          <span>Reattachment</span>
+        </div>
+        <ul class="project-list">
+          <li>Simulated laminar and turbulent flow over a backward-facing step with transient solvers.</li>
+          <li>Compared reattachment lengths and assessed turbulence modelling with the k-ε model.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn more</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#python #programming #ai">
       <img src="img/stress PIN.webp" alt="PINN Project">
-      <h3>Thermal Stress and Strain Analysis in a Cooling Glass Slab using PINN</h3>
-      <p>Physics Informed Neural Network(PINN): Simulated development of thermal Stress and strain in a Cooling Glass Slab using PINN as part of my Internship at AnK.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Thermal Stress Analysis in Cooling Glass Slab – PINN</h3>
+          <span class="project-date">Sep 2024 – Nov 2024</span>
+        </div>
+        <p class="project-subtitle">AnK Internship | Physics-Informed Neural Networks – NVIDIA Modulus</p>
+        <div class="project-skills">
+          <span>Python</span>
+          <span>Modulus</span>
+          <span>PINNs</span>
+          <span>Thermal-Stress</span>
+        </div>
+        <ul class="project-list">
+          <li>Programmed physics-informed models in Modulus to simulate transient heat transfer and thermal stress fields in 2D plates.</li>
+          <li>Incorporated Neumann BCs via DiffusionInterface and animated time-evolution of temperature/stress.</li>
+          <li>Validated PINN results against commercial solvers.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#python #ai #programming">
       <img src="img/Problem_Statement.webp" alt="PINN Project">
-      <h3> 2D-cooling on glass slab using PINN</h3>
-      <p>Physics Informed Neural Network(PINN): Simulated natural cooling of a 2D glass slab using PINN as part of my Internship at AnK.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>2D Cooling of Glass Slab – PINN</h3>
+          <span class="project-date">Sep 2024 – Nov 2024</span>
+        </div>
+        <p class="project-subtitle">AnK Internship | Heat Diffusion with Convective Boundary Conditions</p>
+        <div class="project-skills">
+          <span>Python</span>
+          <span>Modulus</span>
+          <span>PINNs</span>
+          <span>Heat Diffusion</span>
+        </div>
+        <ul class="project-list">
+          <li>Simulated natural cooling of a 2D glass slab with physics-informed models for transient heat diffusion.</li>
+          <li>Added convective boundary conditions for the 2D diffusion problem — see blog post for details.</li>
+          <li>Improved accuracy by enhancing simulations with validation data in Modulus Sym.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#python #ai #programming">
       <img src="img/cht_com.webp" alt="PINN Project">
-      <h3> PINN - Tutorials</h3>
-      <p>Some of the tutorials case I have run while working as an Intern at Accelerated Komputing as part of Learning Process.</p>
-      <div class="project-links">
-        <a href="#ai-modal" class="btn learn-more">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>PINN Tutorials – NVIDIA Modulus</h3>
+          <span class="project-date">Sep 2024 – Nov 2024</span>
+        </div>
+        <p class="project-subtitle">AnK Learning Track | CHT, Advection-Diffusion, Lid-Driven Cavity</p>
+        <div class="project-skills">
+          <span>PINNs</span>
+          <span>Modulus</span>
+          <span>CHT</span>
+          <span>LDC</span>
+        </div>
+        <ul class="project-list">
+          <li>Ran official Modulus examples hands-on: 3D conjugate heat transfer, 2D advection-diffusion, lid-driven cavity, and 1D harmonic oscillator.</li>
+          <li>Built foundations for internship work on thermal-stress PINNs.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#ai-modal" class="btn learn-more">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#cfd #cad">
       <img src="img/canard1.webp" alt="CFD Project">
-      <h3>Effect of sweep angle on lift characteristic of a canard fins</h3>
-      <p>Case Study:Effect of sweep angle on lift characteristic of a canard fins was studied using simulations done on Ansys Fluent.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Sweep-Angle Effect on Canard Lift</h3>
+          <span class="project-date">2023 – 2025</span>
+        </div>
+        <p class="project-subtitle">CFD Case Study | ANSYS Fluent</p>
+        <div class="project-skills">
+          <span>ANSYS Fluent</span>
+          <span>Aerodynamics</span>
+          <span>Lift / Drag</span>
+        </div>
+        <ul class="project-list">
+          <li>Evaluated lift characteristics vs sweep angle for canard fins using ANSYS Fluent simulations.</li>
+          <li>Compared aerodynamic efficiency across configurations for control-surface sizing.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#aircraft #cad">
       <img src="img/apd5.webp" alt=" Project">
-      <h3>Flying Fox- The Loyal Wingman</h3>
-      <p>Preliminary Design of a combat aircraft.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Flying Fox – The Loyal Wingman</h3>
+          <span class="project-date">2024</span>
+        </div>
+        <p class="project-subtitle">Preliminary Design of an Unmanned Combat Aerial Vehicle (UCAV)</p>
+        <div class="project-skills">
+          <span>Aircraft Sizing</span>
+          <span>XFLR5</span>
+          <span>X-Plane</span>
+          <span>CAD</span>
+          <span>Stability</span>
+        </div>
+        <ul class="project-list">
+          <li>Translated mission needs (payload, range, combat profile) into design constraints and propulsion considerations.</li>
+          <li>Did aerodynamic sizing, lift-distribution, and V-tail / wing / fuselage trades; checked static and dynamic stability in X-Plane.</li>
+          <li>Computed CG envelope, neutral point, and cruise / dash / loiter design points; built integrated CAD geometry.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#aircraft #cad">
       <img src="img/am1.webp" alt="Aircraft Project">
-      <h3>Aircraft Design & Manufacturing</h3>
-      <p>3D Design and Manufacturing of a model aircraft.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Aircraft Design & Manufacturing – Biplane</h3>
+          <span class="project-date">2024</span>
+        </div>
+        <p class="project-subtitle">CAD of Biplane Structural Skeleton | Laser-Cut Model Build</p>
+        <div class="project-skills">
+          <span>CATIA</span>
+          <span>SolidWorks</span>
+          <span>Laser Cutting</span>
+          <span>Structures</span>
+        </div>
+        <ul class="project-list">
+          <li>Designed detailed internal structures — ribs, spars, longerons — for biplane wings and fuselage.</li>
+          <li>Fabricated model with laser-cut parts; studied structural integration and weight distribution.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#cad" data-category="#hobby">
       <img src="img/cdm1.webp" alt="CAD Project">
-      <h3>Clothe Drying Machine</h3>
-      <p>Design and Fabrication of Cloth Drying Machine Model.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Cloth Drying Machine</h3>
+          <!-- TODO: add date, e.g. <span class="project-date">2023</span> -->
+        </div>
+        <p class="project-subtitle">Design and Fabrication of Cloth Drying Machine Model</p>
+        <div class="project-skills">
+          <span>CAD</span>
+          <span>Fabrication</span>
+          <!-- TODO: add your skills used, e.g. <span>SolidWorks</span> -->
+        </div>
+        <ul class="project-list">
+          <li>Design and fabrication of cloth drying machine model.</li>
+          <!-- TODO: add 2-3 bullets on what you did, e.g. <li>...</li> -->
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#programming #cfd">
       <img src="img/fem1.webp" alt="CFD Project">
-      <h3>Matlab Code for mesh generation</h3>
-      <p>A matlab program to generate and solve the 2-dimensional steady state heat problems.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>MATLAB Mesh Generation & Heat Solver</h3>
+          <!-- TODO: add date, e.g. <span class="project-date">2023</span> -->
+        </div>
+        <p class="project-subtitle">MATLAB Program for 2D Steady-State Heat Problems</p>
+        <div class="project-skills">
+          <span>MATLAB</span>
+          <span>Meshing</span>
+          <span>FEM</span>
+        </div>
+        <ul class="project-list">
+          <li>MATLAB program to generate mesh and solve 2D steady-state heat problems.</li>
+          <!-- TODO: add 2-3 bullets on what you did, e.g. <li>...</li> -->
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#hobby">
       <img src="img/telescopeme.webp" alt="Hobby Project">
-      <h3>Homemade Telescope</h3>
-      <p>Manufactured a home made telescope with 20x Magnification with locally available material as part of Astronomy Olympiad.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Homemade Telescope</h3>
+          <!-- TODO: add date -->
+        </div>
+        <p class="project-subtitle">20x Magnification Telescope from Local Materials | Astronomy Olympiad</p>
+        <div class="project-skills">
+          <span>Optics</span>
+          <span>Hands-on Build</span>
+        </div>
+        <ul class="project-list">
+          <li>Manufactured homemade telescope with 20x magnification using locally available materials.</li>
+          <!-- TODO: add 1-2 more bullets, e.g. lens selection, testing -->
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#avionics #programming #hobby">
       <img src="img/quantaqube.webp" alt="Hobby Project">
-      <h3>Quantacube</h3>
-      <p>Assembled an 1U cubesat with Long Range communication, Power Management Module, and On-Board Computer as part of Satellite Training.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>QuantaCube – 1U CubeSat</h3>
+          <span class="project-date">2024</span>
+        </div>
+        <p class="project-subtitle">ORION Space Satellite Training | OBC, PMM & Long-Range Comms</p>
+        <div class="project-skills">
+          <span>LoRa RA-02</span>
+          <span>OBC</span>
+          <span>PMM</span>
+          <span>Telemetry</span>
+        </div>
+        <ul class="project-list">
+          <li>Analysed and assembled 1U CubeSat with long-range communication, power management, and on-board computer.</li>
+          <li>Worked on telemetry testing, sensor integration, and system-level debugging for validation.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#hobby #propulsion">
       <img src="img/hobbymotor4.webp" alt="Hobby Project">
-      <h3>Hobby Rocket Motor</h3>
-      <p>Development of sugar based A class motor with locally available material.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Hobby Rocket Motor</h3>
+          <!-- TODO: add date -->
+        </div>
+        <p class="project-subtitle">Sugar-Based A-Class Motor from Local Materials</p>
+        <div class="project-skills">
+          <span>Propulsion</span>
+          <span>Static Testing</span>
+        </div>
+        <ul class="project-list">
+          <li>Development of sugar-based A-class motor with locally available material.</li>
+          <!-- TODO: add 1-2 more bullets, e.g. formulation, test results -->
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 
     <div class="project-card" data-category="#hobby #avionics #programming">
       <img src="img/hab4.webp" alt="Hobby Project">
-      <h3>Project Aarohan: High Altitude Balloon</h3>
-      <p>Design, planning and fabrication of a 2 kg probe to be launched into space of altitude 30km.</p>
-      <div class="project-links">
-        <a href="#contact" class="btn">Learn More</a>
+      <div class="project-body">
+        <div class="project-header">
+          <h3>Project Aarohan: High-Altitude Balloon</h3>
+          <span class="project-date">Apr 2022 – Incomplete</span>
+        </div>
+        <p class="project-subtitle">Project Co-Leader, SEDS Nepal | 14-Member Team | 30 km Target Probe</p>
+        <div class="project-skills">
+          <span>Telemetry</span>
+          <span>Sensor Testing</span>
+          <span>Electronics</span>
+          <span>Leadership</span>
+        </div>
+        <ul class="project-list">
+          <li>Co-led design, assembly, and testing of a 2 kg probe meant to carry 3 student-built CubeSats to near-space.</li>
+          <li>Contributed to electronics design, telemetry integration, sensor testing, and real-time data acquisition.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#contact" class="btn">Learn More</a>
+        </div>
       </div>
     </div>
 </div>
