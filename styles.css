@@ -45,7 +45,7 @@ body {
     display: block;
   }
 
-  /* Paper-plane orbit around navbar name — plane points along direction of travel */
+  /* Paper-plane loop around navbar name — flat ellipse kept inside navbar height */
   .nav-orbit {
     position: relative;
     display: inline-block;
@@ -60,19 +60,33 @@ body {
     line-height: 1;
     color: #64FFDA;
     pointer-events: none;
-    animation: plane-orbit 5s linear infinite;
+    offset-path: path("M -78 -2 A 78 8 0 1 0 78 -2 A 78 8 0 1 0 -78 -2");
+    offset-rotate: auto;
+    animation: plane-travel 5s linear infinite;
   }
 
   .nav-plane i {
     display: block;
   }
 
-  @keyframes plane-orbit {
+  @keyframes plane-travel {
     from {
-      transform: rotate(0deg) translateX(58px) translateY(-7px) rotate(90deg);
+      offset-distance: 0%;
     }
     to {
-      transform: rotate(360deg) translateX(58px) translateY(-7px) rotate(450deg);
+      offset-distance: 100%;
+    }
+  }
+
+  /* Fallback: if offset-path is unsupported, do a small inline shuttle */
+  @supports not (offset-path: path("M 0 0 L 1 0")) {
+    .nav-plane {
+      offset-path: none;
+      animation: plane-shuttle 3s ease-in-out infinite;
+    }
+    @keyframes plane-shuttle {
+      0%, 100% { transform: translateX(-30px) scaleX(1); }
+      50% { transform: translateX(30px) scaleX(1); }
     }
   }
   
@@ -160,7 +174,7 @@ body {
   .hero-about {
     background-color: #020C1B;
     color: #CCD6F6;
-    padding: 120px 40px 48px;
+    padding: 100px 40px 36px;
   }
 
   .hero-about-grid {
@@ -228,120 +242,15 @@ body {
     max-width: 340px;
   }
 
-  /* Rocket launch on the right-hand side of the picture */
-  .rocket-launch {
-    position: absolute;
-    right: 8px;
-    bottom: 6px;
-    width: 54px;
-    height: 230px;
-    pointer-events: none;
-    overflow: visible;
-  }
-
-  .launch-rocket {
-    position: absolute;
-    bottom: 34px;
-    left: 50%;
-    font-size: 1.6rem;
-    color: #CCD6F6;
-    animation: rocket-launch 4.5s ease-in infinite;
-  }
-
-  .launch-rocket i {
-    display: block;
-    transform: rotate(-45deg);
-  }
-
-  .launch-flame {
-    position: absolute;
-    bottom: 22px;
-    left: 50%;
-    width: 8px;
-    height: 18px;
-    transform: translateX(-50%);
-    background: linear-gradient(to bottom, #64FFDA, #00D1FF 60%, transparent);
-    border-radius: 50% 50% 20% 20%;
-    filter: blur(0.5px);
-    animation: flame-flicker 4.5s ease-in infinite;
-  }
-
-  .launch-smoke span {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(204, 214, 246, 0.65);
-    filter: blur(1px);
-    opacity: 0;
-    animation: smoke-puff 4.5s ease-out infinite;
-  }
-
-  .launch-smoke span:nth-child(2) {
-    width: 16px;
-    height: 16px;
-    animation-delay: 0.15s;
-  }
-
-  .launch-smoke span:nth-child(3) {
-    width: 10px;
-    height: 10px;
-    animation-delay: 0.3s;
-  }
-
-  @keyframes rocket-launch {
-    0% {
-      transform: translateX(-50%) translateY(70px);
-      opacity: 0;
-    }
-    12% {
-      opacity: 1;
-    }
-    72% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-50%) translateY(-175px);
-      opacity: 0;
-    }
-  }
-
-  @keyframes flame-flicker {
-    0%, 12% { opacity: 0; transform: translateX(-50%) scaleY(0.6); }
-    18% { opacity: 1; transform: translateX(-50%) scaleY(1); }
-    70% { opacity: 1; }
-    85%, 100% { opacity: 0; transform: translateX(-50%) scaleY(0.7); }
-  }
-
-  @keyframes smoke-puff {
-    0% {
-      transform: translateX(-50%) translateY(0) scale(0.5);
-      opacity: 0;
-    }
-    15% {
-      opacity: 0.8;
-    }
-    60% {
-      opacity: 0.45;
-    }
-    100% {
-      transform: translateX(-50%) translateY(46px) scale(2.4);
-      opacity: 0;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .nav-plane,
-    .rocket-launch {
+    .nav-plane {
       display: none;
     }
   }
 
   @media (max-width: 900px) {
     .hero-about {
-      padding: 110px 20px 40px;
+      padding: 96px 20px 32px;
     }
     .hero-about-grid {
       grid-template-columns: 1fr;
@@ -353,15 +262,11 @@ body {
     .hero-about-image img {
       max-width: 280px;
     }
-    .rocket-launch {
-      height: 200px;
-      right: 14px;
-    }
   }
   
   /* About Me Section */
   .about {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #020C1B;
   }
   
@@ -454,7 +359,7 @@ body {
   }
   /* Skills Section */
 .skills {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #020C1B;
     text-align: center;
   }
@@ -519,7 +424,7 @@ body {
 
   /* Projects Section */
 .projects {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #020C1B;
     text-align: center;
   }
@@ -599,7 +504,7 @@ body {
 
   /* Contact Section */
 .contact {
-    padding: 100px 20px;
+    padding: 70px 20px;
     background-color: #020C1B;
     text-align: center;
   }
@@ -676,7 +581,7 @@ body {
 
   /* Blog Section */
 .blog {
-  padding: 100px 20px;
+  padding: 70px 20px;
   background-color:  #020C1B;
   text-align: center;
 }
@@ -1220,7 +1125,7 @@ table th, table td {
 
 /* Experience Section */
 .experience {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #020C1B;
 }
 
@@ -1541,8 +1446,9 @@ section[id] {
   .skills,
   .projects,
   .blog,
-  .contact {
-    padding: 60px 16px;
+  .contact,
+  .experience {
+    padding: 48px 16px;
   }
 
   .hero {
@@ -1878,4 +1784,318 @@ section[id] {
   grid-column: 1 / -1;
   margin-top: 10px;
   border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+/* ===== Unified buttons — one style everywhere ===== */
+.btn,
+.resume-btn,
+.btn-academic,
+.btn-hobbies,
+.project-links .btn,
+.project-card .project-links .btn,
+.report-request-btn,
+.contact-form button,
+.contact-form .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #64FFDA;
+  border: 1px solid #64FFDA;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn:hover,
+.resume-btn:hover,
+.btn-academic:hover,
+.btn-hobbies:hover,
+.project-links .btn:hover,
+.project-card .project-links .btn:hover,
+.report-request-btn:hover,
+.contact-form button:hover,
+.contact-form .btn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64FFDA;
+  border-color: #64FFDA;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Unified section titles — one style everywhere ===== */
+.section-title,
+.skills h2,
+.projects h2,
+.blog h2,
+.contact h2,
+.about-inline h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00D1FF;
+  text-align: center;
+  margin: 0 0 28px;
+  position: relative;
+}
+
+.section-title::after,
+.skills h2::after,
+.projects h2::after,
+.blog h2::after,
+.contact h2::after,
+.about-inline h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #64FFDA;
+  margin: 0.5rem auto 0;
+}
+
+.about-inline h2 {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.about-inline h2::after {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .section-title,
+  .skills h2,
+  .projects h2,
+  .blog h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .about-inline h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ===== Aerospace interactive layer ===== */
+
+/* Scroll progress — thin flight-path bar under navbar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #64ffda, #00d1ff);
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.6);
+  z-index: 1001;
+  pointer-events: none;
+}
+
+/* Starfield canvas inside hero */
+.hero-about {
+  position: relative;
+  overflow: hidden;
+}
+
+#starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.hero-about-grid,
+.telemetry,
+.flight-stats {
+  position: relative;
+  z-index: 1;
+}
+
+/* Avionics telemetry strip */
+.telemetry {
+  max-width: 1200px;
+  margin: 26px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  align-items: center;
+  padding: 12px 18px;
+  border: 1px solid rgba(100, 255, 218, 0.25);
+  border-radius: 8px;
+  background: rgba(2, 12, 27, 0.55);
+  backdrop-filter: blur(4px);
+  font-variant-numeric: tabular-nums;
+}
+
+.telemetry-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+
+.telemetry-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: #8892B0;
+}
+
+.telemetry-label i {
+  color: #64FFDA;
+  margin-right: 4px;
+}
+
+.telemetry-value {
+  font-size: 1rem;
+  color: #64FFDA;
+  font-weight: 600;
+}
+
+.telemetry-live {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: #8892B0;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64FFDA;
+  box-shadow: 0 0 8px #64FFDA;
+  animation: live-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.8); }
+}
+
+/* Flight-record stats */
+.flight-stats {
+  max-width: 1200px;
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  border: 1px solid rgba(100, 255, 218, 0.15);
+  border-radius: 8px;
+  background: rgba(100, 255, 218, 0.03);
+  padding: 14px 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+  border-color: #64FFDA;
+}
+
+.stat-num {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00D1FF;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.82rem;
+  color: #8892B0;
+  margin-top: 2px;
+}
+
+/* Skill bars animate on scroll */
+.progress {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Subtle 3D tilt for project cards (desktop pointers only) */
+@media (hover: hover) and (pointer: fine) {
+  .project-card.tilt {
+    transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+}
+
+/* Rocket back-to-top (bottom-left, download stays bottom-right) */
+#to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #64FFDA;
+  background: rgba(2, 12, 27, 0.85);
+  color: #64FFDA;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+#to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+#to-top:hover {
+  background: rgba(100, 255, 218, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.25);
+}
+
+#to-top i {
+  transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .progress { transition: none; }
+  .live-dot { animation: none; }
+  #to-top { transition: none; }
+}
+
+@media (max-width: 768px) {
+  .telemetry { gap: 8px 14px; padding: 10px 14px; }
+  .telemetry-live { margin-left: 0; }
+  #to-top { bottom: 20px; left: 20px; width: 46px; height: 46px; }
 }

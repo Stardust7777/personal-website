@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="manifest" href="img/site.webmanifest">
   <meta name="theme-color" content="#0b1526">
-  <link rel="stylesheet" href="styles.css?v=2.1"> <!--adding cache buster to css file-->
+  <link rel="stylesheet" href="styles.css?v=2.4"> <!--adding cache buster to css file-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 </head>
 <body>
+<!-- Scroll progress (flight path) -->
+<div id="scroll-progress" aria-hidden="true"></div>
 <!-- Loading Animation -->
 <div id="loading">
   <div class="custom-loader"></div>
@@ -37,7 +39,6 @@
     </button>
     <ul class="nav-links" id="primary-navigation">
       <li><a href="#hero" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li class="dropdown">
         <a href="#projects" class="dropbtn">Projects</a>
@@ -64,6 +65,7 @@
 
 <!-- Hero + About merged (saves vertical space) -->
 <section id="hero" class="hero-about" data-aos="fade-up">
+  <canvas id="starfield" aria-hidden="true"></canvas>
   <div class="hero-about-grid">
     <div class="hero-about-text">
       <h1 class="hero-name"><span id="typed-text"></span><span id="cursor">|</span></h1>
@@ -88,12 +90,22 @@
     </div>
     <div class="about-image hero-about-image">
       <img src="img/PP-1C.webp" alt="Manish Tajpuriya" class="highlight">
-      <div class="rocket-launch" aria-hidden="true">
-        <div class="launch-smoke"><span></span><span></span><span></span></div>
-        <div class="launch-flame"></div>
-        <div class="launch-rocket"><i class="fas fa-rocket"></i></div>
-      </div>
     </div>
+  </div>
+  <!-- Avionics-style live telemetry strip -->
+  <div class="telemetry" role="status" aria-label="Live flight telemetry (simulated)">
+    <div class="telemetry-item"><span class="telemetry-label"><i class="fas fa-mountain"></i> ALT</span><span class="telemetry-value" id="tele-alt">2,682 m</span></div>
+    <div class="telemetry-item"><span class="telemetry-label"><i class="fas fa-arrow-trend-up"></i> V/SPD</span><span class="telemetry-value" id="tele-vspd">+12.4 m/s</span></div>
+    <div class="telemetry-item"><span class="telemetry-label"><i class="fas fa-gauge-high"></i> MACH</span><span class="telemetry-value" id="tele-mach">0.82</span></div>
+    <div class="telemetry-item"><span class="telemetry-label"><i class="fas fa-compass"></i> HDG</span><span class="telemetry-value" id="tele-hdg">042°</span></div>
+    <div class="telemetry-live"><span class="live-dot"></span>SIM LIVE</div>
+  </div>
+  <!-- Flight-record stats with count-up -->
+  <div class="flight-stats">
+    <div class="stat"><span class="stat-num" data-target="2682" data-suffix=" m">0</span><span class="stat-label">Record apogee — Project Trishul</span></div>
+    <div class="stat"><span class="stat-num" data-target="17" data-suffix="">0</span><span class="stat-label">Projects built & flown</span></div>
+    <div class="stat"><span class="stat-num" data-target="2" data-suffix="">0</span><span class="stat-label">Industry internships</span></div>
+    <div class="stat"><span class="stat-num" data-target="30" data-suffix=" km">0</span><span class="stat-label">HAB target altitude</span></div>
   </div>
 </section>
 
@@ -682,7 +694,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 Manish Tajpuriya. All rights reserved.</p>
+    <p>&copy; 2026 Manish Tajpuriya. All rights reserved.</p>
     <div class="social-links">
       <a href="https://github.com/Stardust7777" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/manish-tajpuriya/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1109,6 +1121,11 @@
     </div>
   </div>
 
+
+<!-- Rocket back-to-top -->
+<button id="to-top" aria-label="Back to top" title="Back to top">
+  <i class="fas fa-rocket"></i>
+</button>
 
 <!-- Floating Download Button with Tooltip -->
 <div class="floating-download">
